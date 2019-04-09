@@ -15,7 +15,7 @@
     <?php
         include('templates/navbar.php');
     ?>
-     
+
      <!-- Conent -->
     <div class="content">
       <div class="container-fluid">
@@ -24,21 +24,21 @@
             <button type="button" href="favoriteSongs.php" class="btn dashboard-button">Favorite Songs</button>
           </div>
           <div class="col-sm" style="text-align: center;">
-            <button type="button" href="myPlaylists.php" class="btn dashboard-button">My Playlists</button>  
+            <button type="button" href="myPlaylists.php" class="btn dashboard-button">My Playlists</button>
           </div>
-          <div class="col-sm"  style="text-align: center;"">
+          <div class="col-sm"  style="text-align: center;">
             <button type="button" href="favoriteArtists.php" class="btn dashboard-button">Favorite Artists</button>
           </div>
         </div>
       </div>
 
     </div>
-    
+
 
 
     <!-- Footer -->
     <?php
-        
+
     ?>
 
 
