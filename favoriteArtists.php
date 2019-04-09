@@ -21,6 +21,7 @@
   <?php
       // include('templates/sql_credentials.php');
       $mysqli = new mysqli("mysql.eecs.ku.edu", "csydney", "Jaisai4e", "csydney");
+      $username = $_SESSION['username'];
   ?>
 
       <!-- Content -->
@@ -35,7 +36,7 @@
                </thead>
 
                <?php
-                 $query = "SELECT Artist.stage_name, genre FROM Artist INNER JOIN Favorite_artists ON Artist.stage_name = Favorite_artists.stage_name AND username = 'sample_user'";
+                 $query = "SELECT Artist.stage_name, genre FROM Artist INNER JOIN Favorite_artists ON Artist.stage_name = Favorite_artists.stage_name AND username = $username";
                  if ($result = $mysqli->query($query))
                  {
                    while ($row = $result->fetch_assoc())

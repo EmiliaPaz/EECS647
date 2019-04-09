@@ -1,3 +1,7 @@
+<?php
+  session_start();
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,6 +28,7 @@
         // include('templates/sql_credentials.php');
         $mysqli = new mysqli("mysql.eecs.ku.edu", "csydney", "Jaisai4e", "csydney");
         $username = $_SESSION['username'];
+
     ?>
 
      <!-- Content -->
