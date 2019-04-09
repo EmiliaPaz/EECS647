@@ -1,5 +1,16 @@
+<?php
+    //  Redirects to home page if user hasn't signed in
+    //  Checks if the username session variable has been set. If true it shows the page, else it redirects to the home page
+    include('dashboardClass.php');
+    $temp = new dashboard();
+    $temp->user_signin();
+ ?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <title>Dashboard</title>
     <!-- Required meta tags -->
@@ -10,13 +21,14 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/general.css">
 </head>
+
 <body>
     <!-- Header -->
     <?php
         include('templates/navbar.php');
     ?>
 
-     <!-- Conent -->
+     <!-- Content -->
     <div class="content">
       <div class="container-fluid">
         <div class="row">
@@ -33,7 +45,6 @@
       </div>
 
     </div>
-
 
 
     <!-- Footer -->
