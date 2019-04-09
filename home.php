@@ -15,14 +15,14 @@
     <?php
         // include('templates/navbar.php');
     ?>
-     
+
      <!-- Conent -->
     <div class="accordion" id="sign">
         <div class="card">
             <div class="card-header" id="signin">
-                <h3> 
+                <h3>
                     <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#signin_collapse" aria-expanded="true" aria-controls="signin_collapse">
-                        Sign in 
+                        Sign in
                     </button>
                 </h3>
             </div>
@@ -37,31 +37,62 @@
 
         <div class="card">
             <div class="card-header" id="signup">
-                <h3> 
+                <h3>
                     <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#signup_collapse" aria-expanded="true" aria-controls="signup_collapse">
-                        Sign up 
+                        Sign up
                     </button>
                 </h3>
             </div>
             <div id="signup_collapse" class="collapse show" aria-labelledby="signup" data-parent="#sign">
                 <div class="card-body">
-                    
+
+                    <form action="backEnd/signup.php" method="post">
+                        <div class="form-group row">
+                            <label for="item" class="col-sm-2 col-form-label">Username</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="newUsername">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="item" class="col-sm-2 col-form-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="newPassword1">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="item" class="col-sm-2 col-form-label">Repeat Password</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="newPassword2">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="item" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="newEmail">
+                            </div>
+                        </div>
 
 
-
-
+                        <div class="form-group row">
+                            <div class="col-sm-12">
+                                <input type="submit" class="btn" name="submit" id="submitItem" label="Submit" value="Sign Up"></input>
+                            </div>
+                        </div>
 
                 </div>
             </div>
         </div>
 
     </div>
-    
+
 
 
     <!-- Footer -->
     <?php
-        
+
     ?>
 
 
