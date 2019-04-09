@@ -154,6 +154,10 @@ CREATE TABLE IF NOT EXISTS Artist_has_song (
   KEY song_id (song_id)
 );
 
+--
+-- Adding values to Artist_has_song
+--
+
 INSERT INTO Artist_has_song (stage_name, song_id) VALUES('Sia', 1);
 INSERT INTO Artist_has_song (stage_name, song_id) VALUES('Sia', 2);
 INSERT INTO Artist_has_song (stage_name, song_id) VALUES('Sia', 3);
