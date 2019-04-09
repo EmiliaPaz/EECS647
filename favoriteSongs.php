@@ -38,7 +38,7 @@
                 </thead>
 
                 <?php
-                  $query = "SELECT Song..song_id, name, genre FROM Song INNER JOIN Favorite_songs ON Song\.song_id = Favorite_songs\.song_id AND username = 'sample_user'";
+                  $query = "SELECT Song.song_id, name, genre FROM Song INNER JOIN Favorite_songs ON Song.song_id = Favorite_songs.song_id AND username = 'sample_user'";
                   if ($result = $mysqli->query($query))
                   {
                     while ($row = $result->fetch_assoc())
