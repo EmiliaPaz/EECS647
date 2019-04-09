@@ -26,11 +26,34 @@
                     </button>
                 </h3>
             </div>
+
             <div id="signin_collapse" class="collapse show" aria-labelledby="signin" data-parent="#sign">
                 <div class="card-body">
-                    <h3> .... </h3>
+
+
+                    <form action="backEnd/signin.php" method="post">
+                        <div class="form-group row">
+                            <label for="item" class="col-sm-2 col-form-label">Username</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" name="Username">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label for="item" class="col-sm-2 col-form-label">Password</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control" name="Password">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" value="Log in" class="btn btn-secondary btn-block"/>
+                        </div>
+                    </form>
+
+
                 </div>
             </div>
+
         </div>
 
 
@@ -57,14 +80,14 @@
                         <div class="form-group row">
                             <label for="item" class="col-sm-2 col-form-label">Password</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="newPassword1">
+                                <input type="password" class="form-control" name="newPassword1">
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label for="item" class="col-sm-2 col-form-label">Repeat Password</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="newPassword2">
+                                <input type="password" class="form-control" name="newPassword2">
                             </div>
                         </div>
 
@@ -75,16 +98,58 @@
                             </div>
                         </div>
 
-
                         <div class="form-group row">
                             <div class="col-sm-12">
-                                <input type="submit" class="btn" name="submit" id="submitItem" label="Submit" value="Sign Up"></input>
+                                <input type="submit" class="btn btn-secondary btn-block" name="submit" value="Sign Up"></input>
                             </div>
                         </div>
+                    </form>
 
                 </div>
             </div>
         </div>
+
+
+
+        <?php
+            // include('/templates/sql_credentials.php');
+            $mysqli = new mysqli("mysql.eecs.ku.edu", "csydney", "Jaisai4e", "csydney");
+            global $mysqli;
+
+       ?>
+
+        <table class="table thead-light table-hover" >
+                <thead class="thead-light">
+                    <th scope="col"> ID </th>
+                    <th scope="col"> Name </th>
+                    <th scope="col"> Genre </th>
+                    <th scope="col"> Album ID </th>
+                </thead>
+
+                <?php
+                $items = "SELECT * FROM Song ORDER BY song_id ASC";
+                if ($result = $mysqli->query($items)) {
+                    // Get all items of the specific user
+                    while ($users_row = $result->fetch_assoc()) {
+                        $song_id= $users_row['song_id'];
+                        $name = $users_row['name'];
+                        $genre = $users_row['genre'];
+                        $album_id = $users_row['album_id'];
+                        ?>
+                        <tr>
+                            <td> <?php echo $song_id; ?> </td>
+                            <td> <?php echo $name; ?> </td>
+                            <td> <?php echo $genre; ?> </td>
+                            <td> <?php echo $album_id; ?> </td>
+                        </tr>
+                    <?php
+                    }
+                    // free result set
+                    $result->free();
+                } ?>
+            </table>
+
+
 
     </div>
 
