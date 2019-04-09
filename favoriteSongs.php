@@ -23,6 +23,7 @@
     <?php
         // include('templates/sql_credentials.php');
         $mysqli = new mysqli("mysql.eecs.ku.edu", "csydney", "Jaisai4e", "csydney");
+        $username = $_SESSION['username'];
     ?>
 
      <!-- Content -->
@@ -38,7 +39,7 @@
                 </thead>
 
                 <?php
-                  $query = "SELECT Song.song_id, name, genre FROM Song INNER JOIN Favorite_songs ON Song.song_id = Favorite_songs.song_id AND username = 'sample_user'";
+                  $query = "SELECT Song.song_id, name, genre FROM Song INNER JOIN Favorite_songs ON Song.song_id = Favorite_songs.song_id AND username = $username";
                   if ($result = $mysqli->query($query))
                   {
                     while ($row = $result->fetch_assoc())
@@ -57,9 +58,16 @@
                     $result->free();
                   }
                 ?>
-
             </table>
         </form>
+    </div>
+
+    <div>
+      Find song:
+      <form action="backEnd/find_song.php" method="post">
+        <input type="text" name="song_name">
+        <input type="submit" value="Search">
+      </form>
     </div>
 
     <!-- Optional JavaScript -->
