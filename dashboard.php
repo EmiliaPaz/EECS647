@@ -32,14 +32,14 @@
     <div class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-sm" style="text-align: center;">
-            <a class="dashboard-button" href="favoriteSongs.php"> Favorite Songs </a>
+          <div class="col-sm dashboard-button" style="text-align: center;">
+            <a href="favoriteSongs.php"> Favorite Songs </a>
           </div>
-          <div class="col-sm" style="text-align: center;">
-            <a class="dashboard-button" href="myPlaylists.php" >My Playlists</button>
+          <div class="col-sm dashboard-button" style="text-align: center;">
+            <a href="myPlaylists.php" >My Playlists</button>
           </div>
-          <div class="col-sm"  style="text-align: center;">
-            <a class="dashboard-button" href="favoriteArtists.php">Favorite Artists</button>
+          <div class="col-sm dashboard-button"  style="text-align: center;">
+            <a href="favoriteArtists.php">Favorite Artists</button>
           </div>
         </div>
       </div>
