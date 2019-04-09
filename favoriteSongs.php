@@ -1,3 +1,12 @@
+<?php
+    //  Redirects to home page if user hasn't signed in
+    //  Checks if the username session variable has been set. If true it shows the page, else it redirects to the home page
+    include('dashboardClass.php');
+    $dboard = new dashboard();
+    $dboard->user_signin();
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
