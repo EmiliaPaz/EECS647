@@ -2,8 +2,8 @@
     //  Redirects to home page if user hasn't signed in
     //  Checks if the username session variable has been set. If true it shows the page, else it redirects to the home page
     include('dashboardClass.php');
-    $temp = new dashboard();
-    $temp->user_signin();
+    $dboard = new dashboard();
+    $dboard->user_signin();
  ?>
 
 
@@ -33,13 +33,13 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-sm" style="text-align: center;">
-            <button type="button" href="favoriteSongs.php" class="btn dashboard-button">Favorite Songs</button>
+            <a class="dashboard-button" href="favoriteSongs.php"> Favorite Songs </a>
           </div>
           <div class="col-sm" style="text-align: center;">
-            <button type="button" href="myPlaylists.php" class="btn dashboard-button">My Playlists</button>
+            <a class="dashboard-button" href="myPlaylists.php" >My Playlists</button>
           </div>
           <div class="col-sm"  style="text-align: center;">
-            <button type="button" href="favoriteArtists.php" class="btn dashboard-button">Favorite Artists</button>
+            <a class="dashboard-button" href="favoriteArtists.php">Favorite Artists</button>
           </div>
         </div>
       </div>

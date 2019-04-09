@@ -122,46 +122,6 @@
 
 
 
-        <?php
-            // include('/templates/sql_credentials.php');
-            $mysqli = new mysqli("mysql.eecs.ku.edu", "csydney", "Jaisai4e", "csydney");
-            global $mysqli;
-
-       ?>
-
-        <table class="table thead-light table-hover" >
-                <thead class="thead-light">
-                    <th scope="col"> ID </th>
-                    <th scope="col"> Name </th>
-                    <th scope="col"> Genre </th>
-                    <th scope="col"> Album ID </th>
-                </thead>
-
-                <?php
-                $items = "SELECT * FROM Song ORDER BY song_id ASC";
-                if ($result = $mysqli->query($items)) {
-                    // Get all items of the specific user
-                    while ($users_row = $result->fetch_assoc()) {
-                        $song_id= $users_row['song_id'];
-                        $name = $users_row['name'];
-                        $genre = $users_row['genre'];
-                        $album_id = $users_row['album_id'];
-                        ?>
-                        <tr>
-                            <td> <?php echo $song_id; ?> </td>
-                            <td> <?php echo $name; ?> </td>
-                            <td> <?php echo $genre; ?> </td>
-                            <td> <?php echo $album_id; ?> </td>
-                        </tr>
-                    <?php
-                    }
-                    // free result set
-                    $result->free();
-                } ?>
-            </table>
-
-
-
     </div>
 
 
