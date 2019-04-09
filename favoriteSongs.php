@@ -1,18 +1,3 @@
-<?php
-<<<<<<< HEAD
-  session_start();
- ?>
-
-=======
-    //  Redirects to home page if user hasn't signed in
-    //  Checks if the username session variable has been set. If true it shows the page, else it redirects to the home page
-    include('dashboardClass.php');
-    $dboard = new dashboard();
-    $dboard->user_signin();
- ?>
-
-
->>>>>>> 5b3559ee58e078f72c84c7818217e6c99abba73e
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,6 +23,7 @@
     <?php
         // include('templates/sql_credentials.php');
         $mysqli = new mysqli("mysql.eecs.ku.edu", "csydney", "Jaisai4e", "csydney");
+        session_start();
         $username = $_SESSION['username'];
 
     ?>
