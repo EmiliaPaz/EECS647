@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Dashboard</title>
+    <title>Songs</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -21,7 +21,8 @@
 
     <!-- Credentials -->
     <?php
-        include('templates/sql_credentials.php');
+        // include('templates/sql_credentials.php');
+        $mysqli = new mysqli("mysql.eecs.ku.edu", "csydney", "Jaisai4e", "csydney");
     ?>
 
      <!-- Content -->
@@ -35,6 +36,28 @@
                     <th scope="col"> Name </th>
                     <th scope="col"> Genre </th>
                 </thead>
+
+                <?php
+                  $query = "SELECT Song.song_id, name, genre FROM Song INNER JOIN Favorite_songs ON Song.song_id = Favorite_songs.song_id AND username = 'sample_user'";
+                  if ($result = $mysqli->query($query))
+                  {
+                    while ($row = $result->fetch_assoc())
+                    {
+                      $song_id = $row['song_id'];
+                      $name = $row['name'];
+                      $genre = $row['genre'];
+                      ?>
+                      <tr>
+                          <td> <?php echo $song_id; ?> </td>
+                          <td> <?php echo $name; ?> </td>
+                          <td> <?php echo $genre; ?> </td>
+                      </tr>
+                      <?php
+                    }
+                    $result->free();
+                  }
+                ?>
+
             </table>
         </form>
     </div>
