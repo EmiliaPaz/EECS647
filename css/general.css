@@ -1,0 +1,13 @@
+#navbar{
+    height: 30px;
+}
+
+.content{
+    margin-top: 40px;
+}
+
+.dashboard-button{
+    width: 100%;
+    background-color: #FFD500;
+    height: 300px;
+}

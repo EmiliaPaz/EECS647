@@ -13,24 +13,47 @@
 <body>
     <!-- Header -->
     <?php
-        include('templates/navbar.php');
+        // include('templates/navbar.php');
     ?>
      
      <!-- Conent -->
-    <div class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm" style="text-align: center;">
-            <button type="button" href="favoriteSongs.php" class="btn dashboard-button">Favorite Songs</button>
-          </div>
-          <div class="col-sm" style="text-align: center;">
-            <button type="button" href="myPlaylists.php" class="btn dashboard-button">My Playlists</button>  
-          </div>
-          <div class="col-sm"  style="text-align: center;"">
-            <button type="button" href="favoriteArtists.php" class="btn dashboard-button">Favorite Artists</button>
-          </div>
+    <div class="accordion" id="sign">
+        <div class="card">
+            <div class="card-header" id="signin">
+                <h3> 
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#signin_collapse" aria-expanded="true" aria-controls="signin_collapse">
+                        Sign in 
+                    </button>
+                </h3>
+            </div>
+            <div id="signin_collapse" class="collapse show" aria-labelledby="signin" data-parent="#sign">
+                <div class="card-body">
+                    <h3> .... </h3>
+                </div>
+            </div>
         </div>
-      </div>
+
+
+
+        <div class="card">
+            <div class="card-header" id="signup">
+                <h3> 
+                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#signup_collapse" aria-expanded="true" aria-controls="signup_collapse">
+                        Sign up 
+                    </button>
+                </h3>
+            </div>
+            <div id="signup_collapse" class="collapse show" aria-labelledby="signup" data-parent="#sign">
+                <div class="card-body">
+                    
+
+
+
+
+
+                </div>
+            </div>
+        </div>
 
     </div>
     
