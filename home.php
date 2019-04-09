@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Dashboard</title>
+    <title>Home</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -35,20 +35,31 @@
                         <div class="form-group row">
                             <label for="item" class="col-sm-2 col-form-label">Username</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control" name="Username">
+                                <input type="text" class="form-control" name="username">
                             </div>
                         </div>
 
                         <div class="form-group row">
                             <label for="item" class="col-sm-2 col-form-label">Password</label>
                             <div class="col-sm-10">
-                                <input type="password" class="form-control" name="Password">
+                                <input type="password" class="form-control" name="password">
                             </div>
                         </div>
                         <div class="form-group">
                             <input type="submit" value="Log in" class="btn btn-secondary btn-block"/>
                         </div>
                     </form>
+
+                    <?php
+                        session_start();
+                        // Shows an error message if the login credentials are invalid
+                        if(isset($_SESSION["signin_error"])){
+                            $signin_error = $_SESSION["signin_error"];
+                            echo "<p>$signin_error</p>";
+                        }
+                        // Destroys the adminError session and its message if the page is refreshed
+                        session_destroy();
+                    ?>
 
 
                 </div>

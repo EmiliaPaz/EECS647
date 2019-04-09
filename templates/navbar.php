@@ -18,7 +18,7 @@
                     </li>
 
                     <li class="px-3 py-2">
-                        <form action="backEnd/Logout.php" method="post">
+                        <form action="backEnd/logout.php" method="post">
                             <input type="submit" value="Log Out"  class="btn btn-light">
                         </form>
                     </li>
@@ -28,6 +28,3 @@
         </div>
     </nav>
 </div>
-
-
-
