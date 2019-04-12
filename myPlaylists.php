@@ -46,7 +46,7 @@
              </thead>
 
              <?php
-               $query = "SELECT playlist_id, name FROM Playlist WHERE username = $username";
+               $query = "SELECT playlist_id, name FROM Playlist WHERE username = '$username'";
                if ($result = $mysqli->query($query))
                {
                  while ($row = $result->fetch_assoc())

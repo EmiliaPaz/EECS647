@@ -46,7 +46,7 @@
                </thead>
 
                <?php
-                 $query = "SELECT Artist.stage_name, genre FROM Artist INNER JOIN Favorite_artists ON Artist.stage_name = Favorite_artists.stage_name AND username = $username";
+                 $query = "SELECT Artist.stage_name, genre FROM Artist INNER JOIN Favorite_artists ON Artist.stage_name = Favorite_artists.stage_name AND username = '$username'";
                  if ($result = $mysqli->query($query))
                  {
                    while ($row = $result->fetch_assoc())
