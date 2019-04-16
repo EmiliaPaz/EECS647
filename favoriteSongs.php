@@ -32,12 +32,13 @@
     <div class="content">
         <h2> Favorite Songs </h2>
 
-        <form action="backEnd/delete_song.php" method="post">
+        <!-- <form action="backEnd/delete_song.php" method="post"> -->
             <table class="table thead-light table-hover" >
                 <thead class="thead-light">
                     <th scope="col"> ID </th>
                     <th scope="col"> Name </th>
                     <th scope="col"> Genre </th>
+                    <th scope="col">  </th>
                 </thead>
 
                 <?php
@@ -54,6 +55,7 @@
                           <td> <?php echo $song_id; ?> </td>
                           <td> <?php echo $name; ?> </td>
                           <td> <?php echo $genre; ?> </td>
+                          <td> <a href="backEnd/delete_song.php?song_id=<?php echo $song_id ?>"> Remove from favorites </a> </td>
                       </tr>
                       <?php
                     }
@@ -61,7 +63,7 @@
                   }
                 ?>
             </table>
-        </form>
+        <!-- </form> -->
     </div>
 
     <div>
