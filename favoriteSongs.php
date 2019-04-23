@@ -65,7 +65,7 @@
 
     <div>
       Find song:
-      <form action="backEnd/find_song.php" method="post">
+      <form action="backEnd/'find_song'.php" method="post">
         <input type="text" name="song_name">
         <input type="submit" value="Search">
       </form>

@@ -49,7 +49,7 @@
                       <tr>
                           <td> <?php echo $stage_name; ?> </td>
                           <td>
-                            <a href="add_song.php?stage_name=<?php echo $stage_name ?>"> Add favorite </a>
+                            <a href="add_artist.php?stage_name=<?php echo $stage_name ?>"> Add favorite </a>
                           </td>
                       </tr>
                       <?php
