@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>My Songs</title>
+    <title>Song Search</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -24,35 +24,33 @@
         // include('templates/sql_credentials.php');
         $mysqli = new mysqli("mysql.eecs.ku.edu", "csydney", "Jaisai4e", "csydney");
         session_start();
-        $username = $_SESSION['username'];
-
+       $username = $_SESSION['username'];
+       $artist_name = $_POST['artist_name'];
     ?>
 
      <!-- Content -->
     <div class="content">
-        <h2> Favorite Songs </h2>
+        <h2> Songs Like "<?php echo $artist_name; ?>"  </h2>
 
-        <!-- <form action="backEnd/delete_song.php" method="post"> -->
             <table class="table thead-light table-hover" >
                 <thead class="thead-light">
-                    <th scope="col"> ID </th>
                     <th scope="col"> Name </th>
-                    <th scope="col">  </th>
+                    <th scope="col"> </th>
                 </thead>
 
                 <?php
-                  $query = "SELECT Song.song_id, name FROM Song INNER JOIN Favorite_songs ON Song.song_id = Favorite_songs.song_id AND username = '$username'";
+                  $query = "SELECT * FROM Artist WHERE stage_name LIKE '%$artist_name%'";
                   if ($result = $mysqli->query($query))
                   {
                     while ($row = $result->fetch_assoc())
                     {
-                      $song_id = $row['song_id'];
-                      $name = $row['name'];
+                      $stage_name = $row['stage_name'];
                       ?>
                       <tr>
-                          <td> <?php echo $song_id; ?> </td>
-                          <td> <?php echo $name; ?> </td>
-                          <td> <a href="backEnd/delete_song.php?song_id=<?php echo $song_id ?>"> Remove from favorites </a> </td>
+                          <td> <?php echo $stage_name; ?> </td>
+                          <td>
+                            <a href="add_song.php?stage_name=<?php echo $stage_name ?>"> Add favorite </a>
+                          </td>
                       </tr>
                       <?php
                     }
@@ -60,14 +58,11 @@
                   }
                 ?>
             </table>
-        <!-- </form> -->
     </div>
 
     <div>
-      Find song:
-      <form action="backEnd/find_song.php" method="post">
-        <input type="text" name="song_name">
-        <input type="submit" value="Search">
+      <form action="../favoriteArtists.php" method="post">
+        <input type="submit" value="Go back">
       </form>
     </div>
 

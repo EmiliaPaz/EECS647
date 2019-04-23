@@ -42,21 +42,18 @@
            <table class="table thead-light table-hover" >
                <thead class="thead-light">
                    <th scope="col"> Name </th>
-                   <th scope="col"> Genre </th>
                </thead>
 
                <?php
-                 $query = "SELECT Artist.stage_name, genre FROM Artist INNER JOIN Favorite_artists ON Artist.stage_name = Favorite_artists.stage_name AND username = '$username'";
+                 $query = "SELECT Artist.stage_name FROM Artist INNER JOIN Favorite_artists ON Artist.stage_name = Favorite_artists.stage_name AND username = '$username'";
                  if ($result = $mysqli->query($query))
                  {
                    while ($row = $result->fetch_assoc())
                    {
                      $name = $row['stage_name'];
-                     $genre = $row['genre'];
                      ?>
                      <tr>
                          <td> <?php echo $name; ?> </td>
-                         <td> <?php echo $genre; ?> </td>
                      </tr>
                      <?php
                    }
@@ -66,6 +63,15 @@
 
            </table>
      </div>
+
+     <div>
+       Find artist:
+       <form action="backEnd/find_artist.php" method="post">
+         <input type="text" name="artist_name">
+         <input type="submit" value="Search">
+       </form>
+     </div>
+
 
     <!-- Optional JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
