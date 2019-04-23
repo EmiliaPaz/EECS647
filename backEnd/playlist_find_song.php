@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Playlist</title>
+    <title>Song Search</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- CSS -->
-    <link rel="stylesheet" href="../css/general.css">
+    <link rel="stylesheet" href="css/general.css">
 </head>
 
 
@@ -16,7 +16,7 @@
 
     <!-- Header -->
     <?php
-        include('../templates/navbar.php');
+        include('templates/navbar.php');
     ?>
 
     <!-- Credentials -->
@@ -24,38 +24,39 @@
         // include('templates/sql_credentials.php');
         $mysqli = new mysqli("mysql.eecs.ku.edu", "csydney", "Jaisai4e", "csydney");
         session_start();
-        $username = $_SESSION['username'];
-        $playlist_id = $_GET['playlist_id'];
-        $playlist_name = $_GET['playlist_name'];
-
-        $_SESSION["playlist_id"] = $playlist_id;
+       $username = $_SESSION['username'];
+       $song_name = $_POST['song_name'];
     ?>
 
      <!-- Content -->
     <div class="content">
-        <h2> <?php echo $playlist_name; ?> </h2>
+        <h2> Songs Like "<?php echo $song_name; ?>"  </h2>
 
-        <!-- <form action="backEnd/delete_song.php" method="post"> -->
             <table class="table thead-light table-hover" >
                 <thead class="thead-light">
-                    <th scope="col"> Song </th>
-                    <th scope="col"> Artist </th>
-                    <th scope="col">  </th>
+                    <th scope="col"> ID </th>
+                    <th scope="col"> Name </th>
+                    <th scope="col"> Genre </th>
+                    <th scope="col"> </th>
                 </thead>
 
                 <?php
-                  $query = "SELECT Song.name, Artist_has_song.stage_name FROM Playlist_contains_song INNER JOIN Song ON Song.song_id = Playlist_contains_song.song_id AND playlist_id = '$playlist_id' INNER JOIN Artist_has_song ON Song.song_id = Artist_has_song.song_id";
+                  $query = "SELECT * FROM Song WHERE name LIKE '%$song_name%'";
                   if ($result = $mysqli->query($query))
                   {
                     while ($row = $result->fetch_assoc())
                     {
-                      $song = $row['name'];
-                      $stage_name = $row['stage_name'];
+                      $song_id = $row['song_id'];
+                      $name = $row['name'];
+                      $genre = $row['genre'];
                       ?>
                       <tr>
-                          <td> <?php echo $song; ?> </td>
-                          <td> <?php echo $stage_name; ?> </td>
-                          <td> <a href="backEnd/delete_song.php?song_id=<?php echo $song_id ?>"> Remove from playlist </a> </td>
+                          <td> <?php echo $song_id; ?> </td>
+                          <td> <?php echo $name; ?> </td>
+                          <td> <?php echo $genre; ?> </td>
+                          <td>
+                            <a href="playlist_add_song.php?song_id=<?php echo $song_id ?>"> Add to playlist </a>
+                          </td>
                       </tr>
                       <?php
                     }
@@ -63,22 +64,11 @@
                   }
                 ?>
             </table>
-        <!-- </form> -->
     </div>
-
-    <div>
-      Find song:
-      <form action="playlist_find_song.php" method="post">
-        <input type="text" name="song_name">
-        <input type="submit" value="Search">
-      </form>
-    </div>
-
-    <br>
 
     <div>
       <form action="../myPlaylists.php" method="post">
-        <input type="submit" value="Back to My Playlists">
+        <input type="submit" value="Go back">
       </form>
     </div>
 
