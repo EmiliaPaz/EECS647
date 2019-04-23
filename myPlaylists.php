@@ -41,7 +41,6 @@
 
          <table class="table thead-light table-hover" >
              <thead class="thead-light">
-                 <th scope="col"> ID </th>
                  <th scope="col"> Name </th>
              </thead>
 
@@ -55,8 +54,9 @@
                    $name = $row['name'];
                    ?>
                    <tr>
-                       <td> <?php echo $playlist_id; ?> </td>
-                       <td> <?php echo $name; ?> </td>
+                       <td>
+                         <a href="backEnd/show_playlist.php?playlist_id=<?php echo $playlist_id ?>"> <?php echo $name; ?> </a>
+                       </td>
                    </tr>
                    <?php
                  }

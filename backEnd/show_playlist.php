@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>My Songs</title>
+    <title>Playlist</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -25,34 +25,41 @@
         $mysqli = new mysqli("mysql.eecs.ku.edu", "csydney", "Jaisai4e", "csydney");
         session_start();
         $username = $_SESSION['username'];
-
+        $playlist_id = $_GET['playlist_id'];
+        // $query = "SELECT name FROM Playlist WHERE playlist_id = '$playlist_id'";
+        // $result = $mysqli->query($query);
+        // $name = "?";
+        // while ($row = $result->fetch_assoc())
+        // {
+        //   $name = $row['name']
+        // }
     ?>
 
      <!-- Content -->
     <div class="content">
-        <h2> Favorite Songs </h2>
+        <h2> <?php echo $name; ?> </h2>
 
         <!-- <form action="backEnd/delete_song.php" method="post"> -->
             <table class="table thead-light table-hover" >
                 <thead class="thead-light">
-                    <th scope="col"> ID </th>
-                    <th scope="col"> Name </th>
+                    <th scope="col"> Song </th>
+                    <th scope="col"> Artist </th>
                     <th scope="col">  </th>
                 </thead>
 
                 <?php
-                  $query = "SELECT Song.song_id, name FROM Song INNER JOIN Favorite_songs ON Song.song_id = Favorite_songs.song_id AND username = '$username'";
+                  $query = "SELECT Song.name, Artist_has_song.stage_name FROM Playlist_contains_song INNER JOIN Song ON Song.song_id = Playlist_contains_song.song_id AND playlist_id = '$playlist_id' INNER JOIN Artist_has_song ON Song.song_id = Artist_has_song.song_id";
                   if ($result = $mysqli->query($query))
                   {
                     while ($row = $result->fetch_assoc())
                     {
-                      $song_id = $row['song_id'];
-                      $name = $row['name'];
+                      $song = $row['name'];
+                      $stage_name = $row['stage_name'];
                       ?>
                       <tr>
-                          <td> <?php echo $song_id; ?> </td>
-                          <td> <?php echo $name; ?> </td>
-                          <td> <a href="backEnd/delete_song.php?song_id=<?php echo $song_id ?>"> Remove from favorites </a> </td>
+                          <td> <?php echo $song; ?> </td>
+                          <td> <?php echo $stage_name; ?> </td>
+                          <td> <a href="backEnd/delete_song.php?song_id=<?php echo $song_id ?>"> Remove from playlist </a> </td>
                       </tr>
                       <?php
                     }
@@ -65,7 +72,7 @@
 
     <div>
       Find song:
-      <form action="backEnd/find_song.php" method="post">
+      <form action="backEnd/'find_song'.php" method="post">
         <input type="text" name="song_name">
         <input type="submit" value="Search">
       </form>
