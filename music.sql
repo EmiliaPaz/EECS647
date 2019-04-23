@@ -5,6 +5,7 @@
 DROP TABLE IF EXISTS Artist;
 CREATE TABLE IF NOT EXISTS Artist (
   stage_name varchar(50) NOT NULL,
+  artist_id varchar(50) UNIQUE NOT NULL,
   popularity int DEFAULT NULL,
   PRIMARY KEY (stage_name)
 );
