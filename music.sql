@@ -27,7 +27,7 @@ CREATE TABLE IF NOT EXISTS Member (
 
 DROP TABLE IF EXISTS Album;
 CREATE TABLE IF NOT EXISTS Album (
-  album_id int NOT NULL,
+  album_id varchar(30) NOT NULL,
   name varchar(30) NOT NULL,
   year varchar(10) NOT NULL,
   popularity int DEFAULT NULL,
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS Album (
 
 DROP TABLE IF EXISTS Song;
 CREATE TABLE IF NOT EXISTS Song (
-  song_id int NOT NULL,
+  song_id varchar(30) NOT NULL,
   name varchar(30) NOT NULL,
   album_id int NOT NULL,
   popularity int DEFAULT NULL,
@@ -112,6 +112,8 @@ CREATE TABLE IF NOT EXISTS User (
   PRIMARY KEY (username)
 );
 
+INSERT INTO User (username, password, email) VALUES ('sample_user', 'password', 'sample_user@ku.edu');
+
 --
 -- Favorite_artists table
 --
@@ -150,6 +152,8 @@ CREATE TABLE IF NOT EXISTS Playlist (
   PRIMARY KEY (playlist_id),
   KEY username (username)
 );
+
+INSERT INTO Playlist (name, username) VALUES ('sample playlist', 'sample_user');
 
 --
 -- Playlist_contains_song

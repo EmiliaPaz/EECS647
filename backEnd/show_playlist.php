@@ -16,7 +16,7 @@
 
     <!-- Header -->
     <?php
-        include('templates/navbar.php');
+        include('../templates/navbar.php');
     ?>
 
     <!-- Credentials -->
@@ -26,18 +26,12 @@
         session_start();
         $username = $_SESSION['username'];
         $playlist_id = $_GET['playlist_id'];
-        // $query = "SELECT name FROM Playlist WHERE playlist_id = '$playlist_id'";
-        // $result = $mysqli->query($query);
-        // $name = "?";
-        // while ($row = $result->fetch_assoc())
-        // {
-        //   $name = $row['name']
-        // }
+        $playlist_name = $_GET['playlist_name'];
     ?>
 
      <!-- Content -->
     <div class="content">
-        <h2> <?php echo $name; ?> </h2>
+        <h2> <?php echo $playlist_name; ?> </h2>
 
         <!-- <form action="backEnd/delete_song.php" method="post"> -->
             <table class="table thead-light table-hover" >
@@ -75,6 +69,14 @@
       <form action="backEnd/'find_song'.php" method="post">
         <input type="text" name="song_name">
         <input type="submit" value="Search">
+      </form>
+    </div>
+
+    <br>
+
+    <div>
+      <form action="../myPlaylists.php" method="post">
+        <input type="submit" value="Back to My Playlists">
       </form>
     </div>
 

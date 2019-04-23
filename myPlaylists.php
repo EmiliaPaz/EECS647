@@ -55,7 +55,7 @@
                    ?>
                    <tr>
                        <td>
-                         <a href="backEnd/show_playlist.php?playlist_id=<?php echo $playlist_id ?>"> <?php echo $name; ?> </a>
+                         <a href="backEnd/show_playlist.php?playlist_id=<?php echo $playlist_id ?>?playlist_name=<?php echo $name ?>"> <?php echo $name; ?> </a>
                        </td>
                    </tr>
                    <?php
