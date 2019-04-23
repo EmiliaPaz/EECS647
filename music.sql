@@ -5,7 +5,7 @@
 DROP TABLE IF EXISTS Artist;
 CREATE TABLE IF NOT EXISTS Artist (
   stage_name varchar(50) NOT NULL,
-  genre varchar(20) NOT NULL,
+  popularity int DEFAULT NULL,
   PRIMARY KEY (stage_name)
 );
 
@@ -13,11 +13,11 @@ CREATE TABLE IF NOT EXISTS Artist (
 -- Adding sample data to Artist table
 --
 
-INSERT INTO Artist (stage_name, genre) VALUES('Sia', 'Pop');
-INSERT INTO Artist (stage_name, genre) VALUES('Coldplay', 'Rock');
-INSERT INTO Artist (stage_name, genre) VALUES('Rihanna', 'R&B');
-INSERT INTO Artist (stage_name, genre) VALUES('Taylor Swift', 'Pop');
-INSERT INTO Artist (stage_name, genre) VALUES('Queen', 'Rock');
+INSERT INTO Artist (stage_name) VALUES('Sia');
+INSERT INTO Artist (stage_name) VALUES('Coldplay');
+INSERT INTO Artist (stage_name) VALUES('Rihanna');
+INSERT INTO Artist (stage_name) VALUES('Taylor Swift');
+INSERT INTO Artist (stage_name) VALUES('Queen');
 
 --
 -- Member table
@@ -56,8 +56,8 @@ DROP TABLE IF EXISTS Album;
 CREATE TABLE IF NOT EXISTS Album (
   album_id int NOT NULL AUTO_INCREMENT,
   name varchar(30) NOT NULL,
-  genre varchar(20) NOT NULL,
-  year year NOT NULL,
+  year varchar(10) NOT NULL,
+  popularity int DEFAULT NULL,
   PRIMARY KEY (album_id)
 );
 
@@ -65,18 +65,18 @@ CREATE TABLE IF NOT EXISTS Album (
 -- Adding sample data to Album table
 --
 
-INSERT INTO Album (name, genre, year) VALUES('This Is Acting', 'Pop', '2016');
-INSERT INTO Album (name, genre, year) VALUES('1000 Forms of Fear', 'Electropop','2004');
-INSERT INTO Album (name, genre, year) VALUES('Parachutes', 'Alternative Rock', '2000');
-INSERT INTO Album (name, genre, year) VALUES('A Head Full of Dreams', 'Pop', '2015');
-INSERT INTO Album (name, genre, year) VALUES('Good Girl Gone Bad', 'Pop', '2007');
-INSERT INTO Album (name, genre, year) VALUES('Anti', 'Pop', '2016');
-INSERT INTO Album (name, genre, year) VALUES('Fearless', 'Country Pop', '2008');
-INSERT INTO Album (name, genre, year) VALUES('1989', 'Pop', '2014');
-INSERT INTO Album (name, genre, year) VALUES('Reputation', 'Pop', '2017');
-INSERT INTO Album (name, genre, year) VALUES('Sheer Heart Attack', 'Rock', '1974');
-INSERT INTO Album (name, genre, year) VALUES('A Night at the Opera', 'Rock', '1975');
-INSERT INTO Album (name, genre, year) VALUES('Innuendo', 'Rock', '1991');
+INSERT INTO Album (name, year) VALUES('This Is Acting', '2016');
+INSERT INTO Album (name, year) VALUES('1000 Forms of Fear', '2004');
+INSERT INTO Album (name, year) VALUES('Parachutes', '2000');
+INSERT INTO Album (name, year) VALUES('A Head Full of Dreams', '2015');
+INSERT INTO Album (name, year) VALUES('Good Girl Gone Bad', '2007');
+INSERT INTO Album (name, year) VALUES('Anti', '2016');
+INSERT INTO Album (name, year) VALUES('Fearless', '2008');
+INSERT INTO Album (name, year) VALUES('1989', '2014');
+INSERT INTO Album (name, year) VALUES('Reputation', '2017');
+INSERT INTO Album (name, year) VALUES('Sheer Heart Attack', '1974');
+INSERT INTO Album (name, year) VALUES('A Night at the Opera', '1975');
+INSERT INTO Album (name, year) VALUES('Innuendo', '1991');
 
 --
 -- Song table
@@ -86,29 +86,55 @@ DROP TABLE IF EXISTS Song;
 CREATE TABLE IF NOT EXISTS Song (
   song_id int NOT NULL AUTO_INCREMENT,
   name varchar(30) NOT NULL,
-  genre varchar(20) NOT NULL,
   album_id int NOT NULL,
+  popularity int DEFAULT NULL,
+  url varchar(150) DEFAULT NULL,
+  track_number int DEFAULT NULL,
   PRIMARY KEY (song_id),
   KEY album_id (album_id)
 );
 
-INSERT INTO Song (name, genre, album_id) VALUES('Alive', 'Pop', 1);
-INSERT INTO Song (name, genre, album_id) VALUES('Cheap Thrills', 'Pop', 1);
-INSERT INTO Song (name, genre, album_id) VALUES('Chandelier', 'Pop', 2);
-INSERT INTO Song (name, genre, album_id) VALUES('Elastic Heart', 'Pop', 2);
-INSERT INTO Song (name, genre, album_id) VALUES('Yellow', 'Alternative Rock', 3);
-INSERT INTO Song (name, genre, album_id) VALUES('A Head Full of Dreams', 'Pop Rock', 4);
-INSERT INTO Song (name, genre, album_id) VALUES('Umbrella', 'Pop', 5);
-INSERT INTO Song (name, genre, album_id) VALUES('Don\'t Stop the Music', 'Dance', 5);
-INSERT INTO Song (name, genre, album_id) VALUES('Work', 'Dancehall', 6);
-INSERT INTO Song (name, genre, album_id) VALUES('Look What You Made Me Do', 'Pop', 9);
-INSERT INTO Song (name, genre, album_id) VALUES('Fifteen', 'Country Pop', 7);
-INSERT INTO Song (name, genre, album_id) VALUES('You Belong With Me', 'Country Pop', 7);
-INSERT INTO Song (name, genre, album_id) VALUES('Blank Space', 'Pop', 8);
-INSERT INTO Song (name, genre, album_id) VALUES('Shake It Off', 'Pop', 8);
-INSERT INTO Song (name, genre, album_id) VALUES('Innuendo', 'Progressive Rock', 12);
-INSERT INTO Song (name, genre, album_id) VALUES('Killer Queen', 'Art Pop', 10);
-INSERT INTO Song (name, genre, album_id) VALUES('Bohemian Rhapsody', 'Progressive Rock', 11);
+INSERT INTO Song (name, album_id) VALUES('Alive', 1);
+INSERT INTO Song (name, album_id) VALUES('Cheap Thrills', 1);
+INSERT INTO Song (name, album_id) VALUES('Chandelier', 2);
+INSERT INTO Song (name, album_id) VALUES('Elastic Heart', 2);
+INSERT INTO Song (name, album_id) VALUES('Yellow', 3);
+INSERT INTO Song (name, album_id) VALUES('A Head Full of Dreams', 4);
+INSERT INTO Song (name, album_id) VALUES('Umbrella', 5);
+INSERT INTO Song (name, album_id) VALUES('Don\'t Stop the Music', 5);
+INSERT INTO Song (name, album_id) VALUES('Work', 6);
+INSERT INTO Song (name, album_id) VALUES('Look What You Made Me Do', 9);
+INSERT INTO Song (name, album_id) VALUES('Fifteen', 7);
+INSERT INTO Song (name, album_id) VALUES('You Belong With Me', 7);
+INSERT INTO Song (name, album_id) VALUES('Blank Space', 8);
+INSERT INTO Song (name, album_id) VALUES('Shake It Off', 8);
+INSERT INTO Song (name, album_id) VALUES('Innuendo', 12);
+INSERT INTO Song (name, album_id) VALUES('Killer Queen', 10);
+INSERT INTO Song (name, album_id) VALUES('Bohemian Rhapsody', 11);
+
+--
+-- Artist_genre
+--
+
+DROP TABLE IF EXISTS Artist_genre;
+CREATE TABLE IF NOT EXISTS Artist_genre (
+  stage_name varchar(50) NOT NULL,
+  genre varchar(20) NOT NULL,
+  PRIMARY KEY (stage_name),
+  KEY stage_name (stage_name)
+);
+
+--
+-- Album_genre
+--
+
+DROP TABLE IF EXISTS Album_genre;
+CREATE TABLE IF NOT EXISTS Album_genre (
+  album_id int NOT NULL,
+  genre varchar(20) NOT NULL,
+  PRIMARY KEY (album_id),
+  KEY album_id (album_id)
+);
 
 --
 -- Artist_has_album

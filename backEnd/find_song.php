@@ -32,7 +32,6 @@
      <div class="content">
          <h2> Songs Like "<?php echo $song_name; ?>"  </h2>
 
-           <!-- <form action="add_song.php" method="post"> -->
              <table class="table thead-light table-hover" >
                  <thead class="thead-light">
                      <th scope="col"> ID </th>
@@ -57,8 +56,6 @@
                            <td> <?php echo $genre; ?> </td>
                            <td>
                              <a href="add_song.php?song_id=<?php echo $song_id ?>"> Add favorite </a>
-                             <!-- <input type="hidden" name ="song_id"> -->
-                             <!-- <input type="submit" value="Add to favorites">  -->
                            </td>
                        </tr>
                        <?php
@@ -67,7 +64,6 @@
                    }
                  ?>
              </table>
-           <!-- </form> -->
      </div>
 
      <div>
