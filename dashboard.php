@@ -21,13 +21,13 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-sm" style="text-align: center;">
-            <button type="button" href="favoriteSongs.php" class="btn dashboard-button">Favorite Songs</button>
+            <a href="favoriteSongs.php"> Favorite Songs </a>
           </div>
           <div class="col-sm" style="text-align: center;">
-            <button type="button" href="myPlaylists.php" class="btn dashboard-button">My Playlists</button>
+            <a href="myPlaylists.php" >My Playlists</button>
           </div>
           <div class="col-sm"  style="text-align: center;">
-            <button type="button" href="favoriteArtists.php" class="btn dashboard-button">Favorite Artists</button>
+            <a href="favoriteArtists.php">Favorite Artists</button>
           </div>
         </div>
       </div>

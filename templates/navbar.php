@@ -1,7 +1,7 @@
 <div class= "container-fluid" id="navbar">
     <nav class="navbar fixed-top navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="#">MusicData</a>
+            <a class="navbar-brand" href="./dashboard.php">MusicData</a>
 
             <li class="dropdown order-1">
                 <button type="button" id="dropdownMenu1" data-toggle="dropdown" class="btn btn-light dropdown-toggle"> </button>
