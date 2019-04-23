@@ -42,6 +42,7 @@
          <table class="table thead-light table-hover" >
              <thead class="thead-light">
                  <th scope="col"> Name </th>
+                  <th scope="col"> Name </th>
              </thead>
 
              <?php
@@ -57,6 +58,7 @@
                        <td>
                          <a href="backEnd/show_playlist.php?playlist_id=<?php echo $playlist_id ?>?playlist_name=<?php echo $name ?>"> <?php echo $name; ?> </a>
                        </td>
+                         <td> <a href="backEnd/delete_playlist.php?playlist_id=<?php echo $playlist_id ?>"> Delete playlist </a> </td>
                    </tr>
                    <?php
                  }
@@ -64,6 +66,14 @@
                }
              ?>
          </table>
+    </div>
+
+    <div>
+      Create new playlist:
+      <form action="backEnd/create_playlist.php" method="post">
+        <input type="text" name="playlist_name">
+        <input type="submit" value="Create Playlist">
+      </form>
     </div>
 
 

@@ -33,9 +33,8 @@
 
      <!-- Content -->
     <div class="content">
-        <h2> <?php echo $playlist_name; ?> </h2>
+        <h2> Playlist <?php echo $playlist_name; ?> </h2>
 
-        <!-- <form action="backEnd/delete_song.php" method="post"> -->
             <table class="table thead-light table-hover" >
                 <thead class="thead-light">
                     <th scope="col"> Song </th>
@@ -63,7 +62,6 @@
                   }
                 ?>
             </table>
-        <!-- </form> -->
     </div>
 
     <div>

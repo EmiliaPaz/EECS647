@@ -24,10 +24,10 @@
             <a href="favoriteSongs.php"> Favorite Songs </a>
           </div>
           <div class="col-sm" style="text-align: center;">
-            <a href="myPlaylists.php" >My Playlists</button>
+            <a href="myPlaylists.php" >My Playlists</a>
           </div>
           <div class="col-sm"  style="text-align: center;">
-            <a href="favoriteArtists.php">Favorite Artists</button>
+            <a href="favoriteArtists.php">Favorite Artists</a>
           </div>
         </div>
       </div>
