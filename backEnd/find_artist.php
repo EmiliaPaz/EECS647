@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Song Search</title>
+    <title>Artist Search</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -30,7 +30,7 @@
 
      <!-- Content -->
     <div class="content">
-        <h2> Songs Like "<?php echo $artist_name; ?>"  </h2>
+        <h2> Artists Like "<?php echo $artist_name; ?>"  </h2>
 
             <table class="table thead-light table-hover" >
                 <thead class="thead-light">

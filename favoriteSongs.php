@@ -35,23 +35,30 @@
         <!-- <form action="backEnd/delete_song.php" method="post"> -->
             <table class="table thead-light table-hover" >
                 <thead class="thead-light">
-                    <th scope="col"> ID </th>
                     <th scope="col"> Name </th>
+                    <th scope="col"> Preview </th>
+                    <th scope="col"> Popularity </th>
+                    <th scope="col"> Track number </th>
                     <th scope="col">  </th>
                 </thead>
 
                 <?php
-                  $query = "SELECT Song.song_id, name FROM Song INNER JOIN Favorite_songs ON Song.song_id = Favorite_songs.song_id AND username = '$username'";
+                  $query = "SELECT Song.song_id, Song.name, Song.url, Song.popularity, Song.track_number FROM Song INNER JOIN Favorite_songs ON Song.song_id = Favorite_songs.song_id AND username = '$username'";
                   if ($result = $mysqli->query($query))
                   {
                     while ($row = $result->fetch_assoc())
                     {
                       $song_id = $row['song_id'];
                       $name = $row['name'];
+                      $url = $row['url'];
+                      $popularity = $row['popularity'];
+                      $track_number = $row['track_number'];
                       ?>
                       <tr>
-                          <td> <?php echo $song_id; ?> </td>
                           <td> <?php echo $name; ?> </td>
+                          <td> <a href="<?php echo $url; ?>"> Listen </a>  </td>
+                          <td> <?php echo $popularity; ?> </td>
+                          <td> <?php echo $track_number; ?> </td>
                           <td> <a href="backEnd/delete_song.php?song_id=<?php echo $song_id ?>"> Remove from favorites </a> </td>
                       </tr>
                       <?php

@@ -42,6 +42,7 @@
            <table class="table thead-light table-hover" >
                <thead class="thead-light">
                    <th scope="col"> Name </th>
+                   <th scope="col"> </th>
                </thead>
 
                <?php
@@ -54,6 +55,7 @@
                      ?>
                      <tr>
                          <td> <?php echo $name; ?> </td>
+                         <td> <a href="backEnd/delete_artist.php?stage_name=<?php echo $name ?>"> Remove from favorites </a> </td>
                      </tr>
                      <?php
                    }

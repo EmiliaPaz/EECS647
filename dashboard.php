@@ -16,6 +16,11 @@
         include('templates/navbar.php');
     ?>
 
+    <?php
+        include ('templates/sql_credentials.php');
+        global $mysqli;
+     ?>
+
      <!-- Conent -->
     <div class="content">
       <div class="container-fluid">
@@ -34,6 +39,35 @@
 
     </div>
 
+    <!-- Recs -->
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm" style="text-align: center;">
+            <h3> Songs You May Like </h3>
+            <?php
+            //get 10 random songs that are not already in the user's favorite songs and which are in an album which is of the same genre as albums that contain songs the user likes, with popularity 60-100
+            // SELECT Song_genre.name FROM Song_genre
+            // WHERE Song_genre.song_id NOT IN
+            // (SELECT Favorite_songs.song_id
+            // FROM Favorite_songs
+            // WHERE username = 'sample_user');
+            ?>
+          </div>
+          <div class="col-sm" style="text-align: center;">
+            <h3> Hidden Gems </h3>
+            <?php
+            //get 10 random songs that are not already in the user's favorite songs and which are in an album which is of the same genre as albums that contain songs the user likes, with popularity 30-60
+             ?>
+          </div>
+          <div class="col-sm"  style="text-align: center;">
+            <h3> Artists You May Like </h3>
+            <?php
+            //get 10 random artists that are not already in the user's favorite artists and which are of the same genre as artists the user likes, with popularity 60-100
+             ?>
+          </div>
+        </div>
+      </div>
 
 
     <!-- Footer -->

@@ -30,7 +30,7 @@ DROP TABLE IF EXISTS Album;
 CREATE TABLE IF NOT EXISTS Album (
   album_id varchar(30) NOT NULL,
   name varchar(30) NOT NULL,
-  year varchar(10) NOT NULL,
+  year int NOT NULL,
   popularity int DEFAULT NULL,
   PRIMARY KEY (album_id)
 );
@@ -43,7 +43,7 @@ DROP TABLE IF EXISTS Song;
 CREATE TABLE IF NOT EXISTS Song (
   song_id varchar(30) NOT NULL,
   name varchar(30) NOT NULL,
-  album_id int NOT NULL,
+  album_id varchar(30) NOT NULL,
   popularity int DEFAULT NULL,
   url varchar(150) DEFAULT NULL,
   track_number int DEFAULT NULL,
@@ -69,7 +69,7 @@ CREATE TABLE IF NOT EXISTS Artist_genre (
 
 DROP TABLE IF EXISTS Album_genre;
 CREATE TABLE IF NOT EXISTS Album_genre (
-  album_id int NOT NULL,
+  album_id varchar(30) NOT NULL,
   genre varchar(20) NOT NULL,
   PRIMARY KEY (album_id),
   KEY album_id (album_id)
@@ -82,7 +82,7 @@ CREATE TABLE IF NOT EXISTS Album_genre (
 DROP TABLE IF EXISTS Artist_has_album;
 CREATE TABLE IF NOT EXISTS Artist_has_album (
   stage_name varchar(50) NOT NULL,
-  album_id int NOT NULL,
+  album_id varchar(30) NOT NULL,
   PRIMARY KEY (stage_name, album_id),
   KEY stage_name (stage_name),
   KEY album_id (album_id)
@@ -95,7 +95,7 @@ CREATE TABLE IF NOT EXISTS Artist_has_album (
 DROP TABLE IF EXISTS Artist_has_song;
 CREATE TABLE IF NOT EXISTS Artist_has_song (
   stage_name varchar(50) NOT NULL,
-  song_id int NOT NULL,
+  song_id varchar(30) NOT NULL,
   PRIMARY KEY (stage_name, song_id),
   KEY stage_name (stage_name),
   KEY song_id (song_id)
@@ -134,7 +134,7 @@ CREATE TABLE IF NOT EXISTS Favorite_artists (
 
 DROP TABLE IF EXISTS Favorite_songs;
 CREATE TABLE IF NOT EXISTS Favorite_songs (
-  song_id int NOT NULL,
+  song_id varchar(30) NOT NULL,
   username varchar(20) NOT NULL,
   PRIMARY KEY (song_id, username),
   KEY song_id (song_id),
@@ -163,7 +163,7 @@ INSERT INTO Playlist (name, username) VALUES ('sample playlist', 'sample_user');
 DROP TABLE IF EXISTS Playlist_contains_song;
 CREATE TABLE IF NOT EXISTS Playlist_contains_song (
   playlist_id int NOT NULL,
-  song_id int NOT NULL,
+  song_id varchar(30) NOT NULL,
   PRIMARY KEY (playlist_id, song_id),
   KEY playlist_id (playlist_id),
   KEY song_id (song_id)
