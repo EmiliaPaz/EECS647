@@ -20,8 +20,7 @@ client_credentials_manager = SpotifyClientCredentials(client_id=client_id, clien
 sp = spotipy.Spotify(client_credentials_manager=client_credentials_manager) #spotify object to access API
 
 
-# artists_array = ["p!nk", "queen", "aerosmith", "abba", "beyonce"];
-artists_array = ["p!nk"]
+artists_array = ["Sam Smith"]
 
 # CSV
 
