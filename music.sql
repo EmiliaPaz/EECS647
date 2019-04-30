@@ -59,7 +59,7 @@ DROP TABLE IF EXISTS Artist_genre;
 CREATE TABLE IF NOT EXISTS Artist_genre (
   stage_name varchar(50) NOT NULL,
   genre varchar(20) NOT NULL,
-  PRIMARY KEY (stage_name),
+  PRIMARY KEY (stage_name, genre),
   KEY stage_name (stage_name)
 );
 
@@ -71,7 +71,7 @@ DROP TABLE IF EXISTS Album_genre;
 CREATE TABLE IF NOT EXISTS Album_genre (
   album_id varchar(30) NOT NULL,
   genre varchar(20) NOT NULL,
-  PRIMARY KEY (album_id),
+  PRIMARY KEY (album_id, genre),
   KEY album_id (album_id)
 );
 

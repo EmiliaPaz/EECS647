@@ -19,6 +19,8 @@
     <?php
         include ('templates/sql_credentials.php');
         global $mysqli;
+        session_start();
+        $username = $_SESSION['username'];
      ?>
 
      <!-- Conent -->
@@ -36,7 +38,6 @@
           </div>
         </div>
       </div>
-
     </div>
 
     <!-- Recs -->
@@ -45,30 +46,220 @@
         <div class="row">
           <div class="col-sm" style="text-align: center;">
             <h3> Songs You May Like </h3>
-            <?php
-            //get 10 random songs that are not already in the user's favorite songs and which are in an album which is of the same genre as albums that contain songs the user likes, with popularity 60-100
-            // SELECT Song_genre.name FROM Song_genre
-            // WHERE Song_genre.song_id NOT IN
-            // (SELECT Favorite_songs.song_id
-            // FROM Favorite_songs
-            // WHERE username = 'sample_user');
-            ?>
+                  <table class="table thead-light table-hover" >
+                      <thead class="thead-light">
+                          <th scope="col"> Title </th>
+                          <th scope="col"> Preview </th>
+                          <th scope="col"> </th>
+                      </thead>
+
+                      <?php
+                        $query = "SELECT DISTINCT Song_genre.song_id, Song_genre.name, Song.url\n"
+                                . "FROM Song_genre\n"
+                                . "INNER JOIN Song\n"
+                                . "ON Song_genre.song_id = Song.song_id\n"
+                                . "AND Song.popularity > 60\n"
+                                . "INNER JOIN User_genre\n"
+                                . "ON Song_genre.genre = User_genre.genre\n"
+                                . "AND User_genre.username = '$username'\n"
+                                . "AND Song_genre.song_id NOT IN\n"
+                                . "(SELECT fs.song_id FROM Favorite_songs fs WHERE fs.username = '$username')\n"
+                                . "ORDER BY RAND()\n"
+                                . "LIMIT 10";
+                        if ($result = $mysqli->query($query))
+                        {
+                          while ($row = $result->fetch_assoc())
+                          {
+                            $song_id= $row['song_id'];
+                            $title = $row['name'];
+                            $url = $row['url'];
+                            ?>
+                            <tr>
+                                <td> <?php echo $title; ?> </td>
+                                <td> <a href="<?php echo $url; ?>" target="_blank"> Listen </a>  </td>
+                                <td> <a href="backEnd/add_song.php?song_id=<?php echo $song_id ?>"> Add favorite </a> </td>
+                            </tr>
+                            <?php
+                          }
+                          $result->free();
+                        }
+                      ?>
+
+                  </table>
           </div>
           <div class="col-sm" style="text-align: center;">
             <h3> Hidden Gems </h3>
-            <?php
-            //get 10 random songs that are not already in the user's favorite songs and which are in an album which is of the same genre as albums that contain songs the user likes, with popularity 30-60
-             ?>
+            <table class="table thead-light table-hover" >
+                <thead class="thead-light">
+                    <th scope="col"> Title </th>
+                    <th scope="col"> Preview </th>
+                    <th scope="col"> </th>
+                </thead>
+
+                <?php
+                  $query = "SELECT DISTINCT Song_genre.song_id, Song_genre.name, Song.url\n"
+                          . "FROM Song_genre\n"
+                          . "INNER JOIN Song\n"
+                          . "ON Song_genre.song_id = Song.song_id\n"
+                          . "AND Song.popularity BETWEEN 30 AND 60\n"
+                          . "INNER JOIN User_genre\n"
+                          . "ON Song_genre.genre = User_genre.genre\n"
+                          . "AND User_genre.username = '$username'\n"
+                          . "AND Song_genre.song_id NOT IN\n"
+                          . "(SELECT fs.song_id FROM Favorite_songs fs WHERE fs.username = '$username')\n"
+                          . "ORDER BY RAND()\n"
+                          . "LIMIT 10";
+                  if ($result = $mysqli->query($query))
+                  {
+                    while ($row = $result->fetch_assoc())
+                    {
+                      $song_id= $row['song_id'];
+                      $title = $row['name'];
+                      $url = $row['url'];
+                      ?>
+                      <tr>
+                          <td> <?php echo $title; ?> </td>
+                          <td> <a href="<?php echo $url; ?>" target="_blank"> Listen </a>  </td>
+                          <td> <a href="backEnd/add_song.php?song_id=<?php echo $song_id ?>"> Add favorite </a> </td>
+                      </tr>
+                      <?php
+                    }
+                    $result->free();
+                  }
+                ?>
+
+            </table>
           </div>
           <div class="col-sm"  style="text-align: center;">
             <h3> Artists You May Like </h3>
-            <?php
-            //get 10 random artists that are not already in the user's favorite artists and which are of the same genre as artists the user likes, with popularity 60-100
-             ?>
+            <table class="table thead-light table-hover" >
+                <thead class="thead-light">
+                    <th scope="col"> Name </th>
+                    <th scope="col"> </th>
+                </thead>
+
+                <?php
+                  $query = "SELECT DISTINCT Artist_genre.stage_name\n"
+                        . "FROM Artist_genre\n"
+                        . "INNER JOIN User_genre\n"
+                        . "ON Artist_genre.genre = User_genre.genre\n"
+                        . "AND User_genre.username = '$username'\n"
+                        . "AND Artist_genre.stage_name NOT IN\n"
+                        . "(SELECT fa.stage_name FROM Favorite_artists fa WHERE fa.username = '$username')\n"
+                        . "ORDER BY RAND()\n"
+                        . "LIMIT 10";
+                  if ($result = $mysqli->query($query))
+                  {
+                    while ($row = $result->fetch_assoc())
+                    {
+                      $stage_name = $row['stage_name'];
+                      ?>
+                      <tr>
+                          <td> <?php echo $stage_name; ?> </td>
+                          <td> <a href="backEnd/add_artist.php?stage_name=<?php echo $stage_name ?>"> Add favorite </a> </td>
+                      </tr>
+                      <?php
+                    }
+                    $result->free();
+                  }
+                ?>
+
+            </table>
           </div>
         </div>
       </div>
 
+    <!-- mood -->
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm" style="text-align: center;">
+            <h3> Moods </h3>
+            <table class="table thead-light table-hover" >
+                <thead class="thead-light">
+                    <th scope="col"> Mood </th>
+                    <th scope="col">  Title</th>
+                    <th scope="col">  Title</th>
+                    <th scope="col">  </th>
+                </thead>
+
+                <?php
+                  $query = "SELECT Song.song_id, Song.name, Song.url\n"
+                          . "FROM Song\n"
+                          . "WHERE Song.valence > 0.65\n"
+                          . "ORDER BY RAND()\n"
+                          . "LIMIT 1";
+                  if ($result = $mysqli->query($query))
+                  {
+                    while ($row = $result->fetch_assoc())
+                    {
+                      $song_id = $row['song_id'];
+                      $title = $row['name'];
+                      $url = $row['url'];
+                      ?>
+                      <tr>
+                          <td> Positive </td>
+                          <td> <?php echo $title; ?> </td>
+                          <td> <a href="<?php echo $url; ?>" target="_blank"> Listen </a>  </td>
+                          <td> <a href="backEnd/add_song.php?song_id=<?php echo $song_id ?>"> Add favorite </a> </td>
+                      </tr>
+                      <?php
+                    }
+                    $result->free();
+                  }
+                  $query = "SELECT Song.song_id, Song.name, Song.url\n"
+                          . "FROM Song\n"
+                          . "WHERE Song.valence BETWEEN 0.35 AND 0.65\n"
+                          . "ORDER BY RAND()\n"
+                          . "LIMIT 1";
+                  if ($result = $mysqli->query($query))
+                  {
+                    while ($row = $result->fetch_assoc())
+                    {
+                      $song_id = $row['song_id'];
+                      $title = $row['name'];
+                      $url = $row['url'];
+                      ?>
+                      <tr>
+                          <td> Neutral </td>
+                          <td> <?php echo $title; ?> </td>
+                          <td> <a href="<?php echo $url; ?>" target="_blank"> Listen </a>  </td>
+                          <td> <a href="backEnd/add_song.php?song_id=<?php echo $song_id ?>"> Add favorite </a> </td>
+                      </tr>
+                      <?php
+                    }
+                    $result->free();
+                  }
+                  $query = "SELECT Song.song_id, Song.name, Song.url\n"
+                          . "FROM Song\n"
+                          . "WHERE Song.valence < 0.35\n"
+                          . "ORDER BY RAND()\n"
+                          . "LIMIT 1";
+                  if ($result = $mysqli->query($query))
+                  {
+                    while ($row = $result->fetch_assoc())
+                    {
+                      $song_id = $row['song_id'];
+                      $title = $row['name'];
+                      $url = $row['url'];
+                      ?>
+                      <tr>
+                          <td> Negative </td>
+                          <td> <?php echo $title; ?> </td>
+                          <td> <a href="<?php echo $url; ?>" target="_blank"> Listen </a>  </td>
+                          <td> <a href="backEnd/add_song.php?song_id=<?php echo $song_id ?>"> Add favorite </a> </td>
+                      </tr>
+                      <?php
+                    }
+                    $result->free();
+                  }
+                ?>
+
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Footer -->
     <?php
