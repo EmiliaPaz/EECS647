@@ -1,3 +1,13 @@
+<?php
+    //  Redirects to home page if user hasn't signed in
+    include('dashboardClass.php');
+    $dashboard = new dashboard();
+    $dashboard->user_signin();
+    // SQL credentials
+    include ('templates/sql_credentials.php');
+    global $mysqli;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,12 +26,13 @@
         include('templates/navbar.php');
     ?>
 
+
     <?php
-        include ('templates/sql_credentials.php');
-        global $mysqli;
         session_start();
         $username = $_SESSION['username'];
      ?>
+
+
 
      <!-- Conent -->
     <div class="content">
