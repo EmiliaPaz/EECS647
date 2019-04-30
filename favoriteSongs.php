@@ -1,3 +1,10 @@
+<?php
+    //  Redirects to home page if user hasn't signed in
+    include('dashboardClass.php');
+    $dashboard = new dashboard();
+    $dashboard->user_signin();
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
