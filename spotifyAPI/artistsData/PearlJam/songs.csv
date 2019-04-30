@@ -18,7 +18,7 @@ id,name,album_id,popularity,url,track_number,valence
 1YdFdvn3NgPWE4MlKEJ46Q,I've Got A Feeling - Live,5p58xqouYCtDpKCmdISXvT,40,,17,0.331
 5NHZFD1TXeBwAFV3EzRKjT,Getaway,01WEcEzoa9mfh8fIDhvV1M,51,,1,0.765
 2PdxbK3d0ZS58dD8jRqR6L,Mind Your Manners,01WEcEzoa9mfh8fIDhvV1M,50,,2,0.866
-2h1DKQLsgsVcM0Lzw66NLm,My Father’s Son,01WEcEzoa9mfh8fIDhvV1M,41,,3,0.615
+2h1DKQLsgsVcM0Lzw66NLm,My Father�۪s Son,01WEcEzoa9mfh8fIDhvV1M,41,,3,0.615
 1cAMXz9mnvrqyQLSG4KeeE,Sirens,01WEcEzoa9mfh8fIDhvV1M,63,,4,0.483
 5BISG8mt214XVok85ICfsz,Lightning Bolt,01WEcEzoa9mfh8fIDhvV1M,51,,5,0.787
 10ksqrWHRkFHAdD9Nggalm,Infallible,01WEcEzoa9mfh8fIDhvV1M,43,,6,0.582
@@ -40,28 +40,6 @@ id,name,album_id,popularity,url,track_number,valence
 00NkvHyGAGC2waBNmCaAdn,Force Of Nature,4DCwNXpnKEBYbls0T4LQzN,41,,10,0.775
 0PkOdIbNj8L3e0p1JGIfLO,The End,4DCwNXpnKEBYbls0T4LQzN,53,,11,0.336
 0nQhUQvfGf00sr04Aj5xDy,Better Man - Live,4DCwNXpnKEBYbls0T4LQzN,40,,12,0.332
-7qhgIDmBk8GhY7VYObWous,Gonna See My Friend,0Zs8psYQAFYXklESrL4UsV,2,,1,0.855
-4fRBgRGpIfCfuIHLWSBK4h,Got Some,0Zs8psYQAFYXklESrL4UsV,1,,2,0.565
-0JxuuJB6dPR2s0KL0su5F0,The Fixer,0Zs8psYQAFYXklESrL4UsV,13,,3,0.894
-3xeoIuSy2YTetIWnXVTQgY,Johnny Guitar,0Zs8psYQAFYXklESrL4UsV,1,,4,0.825
-3IsWNivZZHYURT2kTIvBDU,Just Breathe,0Zs8psYQAFYXklESrL4UsV,18,,5,0.283
-3swnQCQqUUmuioKkFzp836,Amongst The Waves,0Zs8psYQAFYXklESrL4UsV,5,,6,0.558
-4VBN3grcpeycK5m6I7jPN8,Unthought Known,0Zs8psYQAFYXklESrL4UsV,6,,7,0.689
-4hWKjprJ1YqGz33BzycbeI,Supersonic,0Zs8psYQAFYXklESrL4UsV,1,,8,0.809
-4jsuUeqAIRBC4tKYInqSnK,Speed Of Sound,0Zs8psYQAFYXklESrL4UsV,0,,9,0.363
-4uSJr2HFdqRkdJx1JWgZOd,Force Of Nature,0Zs8psYQAFYXklESrL4UsV,2,,10,0.782
-5pPs18xCTB8G9SgbsSdRX5,The End,0Zs8psYQAFYXklESrL4UsV,6,,11,0.332
-2hHIaXvZDlGpwK6kowNxbG,Gonna See My Friend,0h52AbLNgjY4ctVfSZ1O7o,8,,1,0.855
-4CU50fx7xn2nH57kllWpd6,Got Some,0h52AbLNgjY4ctVfSZ1O7o,10,,2,0.565
-1CmByR0riObHakKx0HnPXP,Johnny Guitar,0h52AbLNgjY4ctVfSZ1O7o,9,,3,0.825
-5zM0R4G7GY8bbB7SfaVyav,Just Breathe,0h52AbLNgjY4ctVfSZ1O7o,44,,4,0.283
-1b58axbERsIa7hHmJ1vGGN,Amongst The Waves,0h52AbLNgjY4ctVfSZ1O7o,24,,5,0.558
-5PPNFS29DBX4K4CGt8pu7T,Unthought Known,0h52AbLNgjY4ctVfSZ1O7o,25,,6,0.689
-4dSiZH94ss58uKB02X6J3B,Supersonic,0h52AbLNgjY4ctVfSZ1O7o,9,,7,0.809
-4wNNmMRYvNfV4bsiCdjO2y,Speed Of Sound,0h52AbLNgjY4ctVfSZ1O7o,9,,8,0.363
-5IbtC5tJbDpxtvk9UbL2u0,Force Of Nature,0h52AbLNgjY4ctVfSZ1O7o,9,,9,0.782
-0rYlYTmZEBsb4mVDEIhDLo,The End,0h52AbLNgjY4ctVfSZ1O7o,25,,10,0.332
-6JYUm1vhdGLmCzbVjQCBhj,Better Man - Live,0h52AbLNgjY4ctVfSZ1O7o,7,,11,0.298
 4E938GnJH2e4dtImtRpjpX,Life Wasted,5PY2mZGCOMezmWH7hiCwFH,49,https://p.scdn.co/mp3-preview/81e4aadb081f7e26c9e4623ce25a89c461b9d925?cid=f2aa2c18088747f585c6ff121849072c,1,0.497
 4mWYx9wadNBVrgcTRzHSkB,World Wide Suicide,5PY2mZGCOMezmWH7hiCwFH,49,https://p.scdn.co/mp3-preview/08e14567a3dd4f04ec18c32ca5041e5d417c07c7?cid=f2aa2c18088747f585c6ff121849072c,2,0.721
 6CRQbrPwC2DoKkJYBuQ9pz,Comatose,5PY2mZGCOMezmWH7hiCwFH,38,https://p.scdn.co/mp3-preview/7c82cc64b5a4e50237482d383c6344a003e638bd?cid=f2aa2c18088747f585c6ff121849072c,3,0.221
@@ -75,19 +53,6 @@ id,name,album_id,popularity,url,track_number,valence
 1m83O2gho4H9SdQMGFznbg,Army Reserve,5PY2mZGCOMezmWH7hiCwFH,37,https://p.scdn.co/mp3-preview/b758a733601e0983752de76635b8e194deef4b39?cid=f2aa2c18088747f585c6ff121849072c,11,0.589
 0sHdUji2tWxiRDfShSWHUN,Come Back,5PY2mZGCOMezmWH7hiCwFH,56,https://p.scdn.co/mp3-preview/7c9e5b50e47ad97679f8979fc571e711d63992be?cid=f2aa2c18088747f585c6ff121849072c,12,0.267
 73XSeP4sfxvHBl7eNsOHtj,Inside Job,5PY2mZGCOMezmWH7hiCwFH,48,https://p.scdn.co/mp3-preview/5a218118ad2f8ed0fec53a7bcfe0472c7dd56698?cid=f2aa2c18088747f585c6ff121849072c,13,0.0739
-0cujsuo8M0ZMShWjNvgohI,Life Wasted - Brendan O'Brien Mix,1cJEPzLBLME22ZUra16HT2,29,https://p.scdn.co/mp3-preview/1a7124a4947bf1f5485fbca556af85f1bd551bee?cid=f2aa2c18088747f585c6ff121849072c,1,0.497
-42lAbxpWEFQHPik42LPVR1,World Wide Suicide - Brendan O'Brien Mix,1cJEPzLBLME22ZUra16HT2,28,https://p.scdn.co/mp3-preview/91c99cdb5ce5a47d95d28fa730fd0bd69e7c2cef?cid=f2aa2c18088747f585c6ff121849072c,2,0.463
-6rU8qBnzCn7J6nrzTuVTWx,Comatose - Brendan O'Brien Mix,1cJEPzLBLME22ZUra16HT2,27,https://p.scdn.co/mp3-preview/747d57563cd9972e5ca6cc4a5b648466f71afaef?cid=f2aa2c18088747f585c6ff121849072c,3,0.203
-3uYqF6kfNoWpyViwVAW7Op,Severed Hand - Brendan O'Brien Mix,1cJEPzLBLME22ZUra16HT2,27,https://p.scdn.co/mp3-preview/28daa232beb2f7120835bc6140445197f05faf5b?cid=f2aa2c18088747f585c6ff121849072c,4,0.206
-0sVaPVh6OQv7KqaCQz8W4U,Marker In the Sand - Brendan O'Brien Mix,1cJEPzLBLME22ZUra16HT2,27,https://p.scdn.co/mp3-preview/205f83042d334031a8cfbdfb8d3a97d666cff7d1?cid=f2aa2c18088747f585c6ff121849072c,5,0.558
-7hDtNOPKrw4OjprCHkEBXZ,Parachutes - Brendan O'Brien Mix,1cJEPzLBLME22ZUra16HT2,27,https://p.scdn.co/mp3-preview/65a587d0f9b9b3f7e5bb7cae530b7589edfab9d1?cid=f2aa2c18088747f585c6ff121849072c,6,0.588
-5pIya7TOJH4fMbR0SEatlu,Unemployable - Brendan O'Brien Mix,1cJEPzLBLME22ZUra16HT2,26,https://p.scdn.co/mp3-preview/66400a9216a44ebbaf5967b0d84e1f68394d5f52?cid=f2aa2c18088747f585c6ff121849072c,7,0.658
-0TABj1OCQRqGP1WcuIILDM,Big Wave - Brendan O'Brien Mix,1cJEPzLBLME22ZUra16HT2,26,https://p.scdn.co/mp3-preview/3297b9a964ff8bb33a41204eaa5e01fd4a66a238?cid=f2aa2c18088747f585c6ff121849072c,8,0.469
-3npDDgW4iYtHbJKYCYf604,Gone - Brendan O'Brien Mix,1cJEPzLBLME22ZUra16HT2,27,https://p.scdn.co/mp3-preview/17f39c6f096de2ff29221f5b07f020187f3bda3a?cid=f2aa2c18088747f585c6ff121849072c,9,0.137
-7lDacu5ad4NQ3U47uxf8pi,Wasted Reprise - Brendan O'Brien Mix,1cJEPzLBLME22ZUra16HT2,25,https://p.scdn.co/mp3-preview/7b401c633c844bf5d32e19177b5d222c65d40f32?cid=f2aa2c18088747f585c6ff121849072c,10,0.0908
-1VMJU5ywSQ3b1nCWORvRrd,Army Reserve - Brendan O'Brien Mix,1cJEPzLBLME22ZUra16HT2,26,https://p.scdn.co/mp3-preview/9941d041184a62f0a877224e6ee575157e412719?cid=f2aa2c18088747f585c6ff121849072c,11,0.445
-3FNJB0bbh3arAZ5R71vZji,Come Back - Brendan O'Brien Mix,1cJEPzLBLME22ZUra16HT2,29,https://p.scdn.co/mp3-preview/1dfa34308fcd1488148c08e8a5e7c1ef5a9c0ba0?cid=f2aa2c18088747f585c6ff121849072c,12,0.361
-3hZTnQjFdpjWy6mOH5L2kS,Inside Job - Brendan O'Brien Mix,1cJEPzLBLME22ZUra16HT2,27,https://p.scdn.co/mp3-preview/c8041377da9a467ae08c15e70125305136ebc782?cid=f2aa2c18088747f585c6ff121849072c,13,0.0645
 2BcBRQk7ODkwWmLgVmcdoW,Can't Keep,7AOWw68DEPnDmTpquZw8bG,37,https://p.scdn.co/mp3-preview/5ef57a8c54ba28e781bcdff540d3d9b92a75b171?cid=f2aa2c18088747f585c6ff121849072c,1,0.411
 4ilxCIvCVtBppVykx9UDaX,Save You,7AOWw68DEPnDmTpquZw8bG,39,https://p.scdn.co/mp3-preview/0a0935078fd8bb8ccaca05f20a2e6cba6da79043?cid=f2aa2c18088747f585c6ff121849072c,2,0.558
 1chdbWCaBaoQUQLWEfew5l,Love Boat Captain,7AOWw68DEPnDmTpquZw8bG,40,https://p.scdn.co/mp3-preview/aa0af5946f5191c3f5aed77ecdbb08aee7491385?cid=f2aa2c18088747f585c6ff121849072c,3,0.176

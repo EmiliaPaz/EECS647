@@ -64,7 +64,7 @@ id,name,album_id,popularity,url,track_number,valence
 3gluwLob4WQKYDPDKi09Ql,Long Tall Sally - Live / Remastered,0n9SWDBEftKwq09B01Pwzw,35,,13,0.655
 4Dw9HFzXqmdJRM8vfc1FId,You Can't Do That - Live / Bonus Track,0n9SWDBEftKwq09B01Pwzw,34,,14,0.677
 6ek0XTffa5eUTkwamO0q5B,I Want To Hold Your Hand - Live / Bonus Track,0n9SWDBEftKwq09B01Pwzw,39,,15,0.515
-1WoLOPeSqaijOuhi9Wm7V1,Everybody’s Trying To Be My Baby - Live / Bonus Track,0n9SWDBEftKwq09B01Pwzw,33,,16,0.727
+1WoLOPeSqaijOuhi9Wm7V1,Everybody�۪s Trying To Be My Baby - Live / Bonus Track,0n9SWDBEftKwq09B01Pwzw,33,,16,0.727
 5tc3aFZhTcW46vRIk23T6e,Baby's In Black - Live / Bonus Track,0n9SWDBEftKwq09B01Pwzw,34,,17,0.669
 121AmMmQnBWZh8HNjZwuK6,Get Back - Naked Version / Remastered 2013,4KYcffwC5HgjJLdpQU9SjC,45,,1,0.54
 4Iv7cWRprWUT0ctTsg5s54,Dig A Pony - Naked Version / Remastered 2013,4KYcffwC5HgjJLdpQU9SjC,42,,2,0.499
@@ -92,56 +92,6 @@ id,name,album_id,popularity,url,track_number,valence
 1zdBFL2UtwbCEubEdcdSmU,When I'm Sixty Four,0XRZpF083HqgygM0v1hQyE,45,,13,0.594
 7qnX6mlylOFWHf75EkfGw7,Nowhere Man,0XRZpF083HqgygM0v1hQyE,44,,14,0.852
 1ntoOW2GNFCnSO7mmabrTU,It's All Too Much,0XRZpF083HqgygM0v1hQyE,43,,15,0.208
-1GOrFU6g2HwRn5oo9oBmfV,"And Here We Are Again - Live At The BBC For ""Pop Go The Beatles"" / 23rd July, 1963",4On0Hf7VJC1jz5gXY2cU8p,0,,1,0.965
-32O18bd2TXidvDc24fWb8d,"Words Of Love - Live At The BBC For ""Pop Go The Beatles"" / 20th August, 1963",4On0Hf7VJC1jz5gXY2cU8p,33,,2,0.925
-33zZLefXgcbX3f0CFQ49b0,"How About It, Gorgeous? - Live At The BBC For ""Pop Go The Beatles"" / 30th July, 1963",4On0Hf7VJC1jz5gXY2cU8p,30,,3,0.923
-395dNtREg9CV943xnYim8c,"Do You Want To Know A Secret - Live At The BBC For ""Pop Go The Beatles"" / 30th July, 1963",4On0Hf7VJC1jz5gXY2cU8p,34,,4,0.716
-1KhdqGq6CNKBqPddqjFCQo,"Lucille - Live At The BBC For ""Pop Go The Beatles"" / 17th September, 1963",4On0Hf7VJC1jz5gXY2cU8p,31,,5,0.91
-1ijQL9FezAggswh77wxvNK,"Hey Paul…. - Live At The BBC For ""Pop Go The Beatles"" / 25th June, 1963",4On0Hf7VJC1jz5gXY2cU8p,1,,6,0.969
-07C5ez7XXvd9sE5YM3X83F,"Anna (Go To Him) - Live At The BBC For ""Pop Go The Beatles"" / 27th August, 1963",4On0Hf7VJC1jz5gXY2cU8p,33,,7,0.812
-5vMWnicTtNy4gaJCsDZq7E,"Hello! - Live At The BBC For ""Pop Go The Beatles"" / 25th June, 1963",4On0Hf7VJC1jz5gXY2cU8p,1,,8,0.973
-6r4AQXhOKOZzerkc96Qv2q,"Please Please Me - Live At The BBC For ""Pop Go The Beatles"" / 13th August, 1963",4On0Hf7VJC1jz5gXY2cU8p,32,,9,0.824
-5VxD1v6bjVC8hOW5pRzDIb,"Misery - Live At The BBC For ""Here We Go"" / 12th March, 1963",4On0Hf7VJC1jz5gXY2cU8p,31,,10,0.857
-6MVohEoExQiPfsoTeWh5NA,"I'm Talking About You - Live At The BBC For ""Saturday Club"" / 16th March, 1963",4On0Hf7VJC1jz5gXY2cU8p,30,,11,0.95
-3PbfhMu7zctIe6ayA8uZAN,"A Real Treat - Live At The BBC For ""Pop Go The Beatles"" / 25th June, 1963",4On0Hf7VJC1jz5gXY2cU8p,29,,12,0.798
-3b4XdfAEmkrt90CRn6kJpO,"Boys - Live At The BBC For ""Pop Go The Beatles"" / 25th June, 1963",4On0Hf7VJC1jz5gXY2cU8p,30,,13,0.792
-2W0zZys4Arb0PWeuBftUrp,"Absolutely Fab - Live At The BBC For ""Pop Go The Beatles"" / 25th June, 1963",4On0Hf7VJC1jz5gXY2cU8p,1,,14,0.949
-1aCsBUZi7c4ISu0fE4onjl,"Chains - Live At The BBC For ""Pop Go The Beatles"" / 25th June, 1963",4On0Hf7VJC1jz5gXY2cU8p,30,,15,0.924
-0SjiwS4OB57pE1iFpL2kc2,"Ask Me Why - Live At The BBC For ""Pop Go The Beatles"" / 24th September, 1963",4On0Hf7VJC1jz5gXY2cU8p,30,,16,0.874
-4JZK2mTiWNFsEGJ14Z0ptX,"Till There Was You - Live At The BBC For ""Pop Go The Beatles"" / 30th July, 1963",4On0Hf7VJC1jz5gXY2cU8p,32,,17,0.759
-1AwFOm1ihDP7NQxBblwQQS,"Lend Me Your Comb - Live At The BBC For ""Pop Go The Beatles"" / 16th July, 1963",4On0Hf7VJC1jz5gXY2cU8p,29,,18,0.961
-7rJyaMfst2659UXAZCGP9E,"Lower 5E - Live At The BBC For ""Pop Go The Beatles"" / 10th September, 1963",4On0Hf7VJC1jz5gXY2cU8p,1,,19,0.96
-4nS1ASybRmUQ5RheSTyD9i,"The Hippy Hippy Shake - Live At The BBC For ""Pop Go The Beatles"" / 10th September, 1963",4On0Hf7VJC1jz5gXY2cU8p,29,,20,0.928
-70xrIwoEZFPl0z05jch6Vt,"Roll Over Beethoven - Live At The BBC For ""Pop Go The Beatles"" / 3rd September, 1963",4On0Hf7VJC1jz5gXY2cU8p,30,,21,0.892
-4X5ea2X6j3mC6Op2O89Pzh,"There's A Place - Live At The BBC For ""Pop Go The Beatles"" / 3rd September, 1963",4On0Hf7VJC1jz5gXY2cU8p,29,,22,0.863
-2irmkgFSP2s8DKzN33RDgO,"Bumper Bundle - Live At The BBC For ""Pop Go The Beatles"" / 25th June, 1963",4On0Hf7VJC1jz5gXY2cU8p,27,,23,0.906
-3kHZUMP24ImkH9PHgjljKB,"P.S. I Love You - Live At The BBC For ""Pop Go The Beatles"" / 25th June, 1963",4On0Hf7VJC1jz5gXY2cU8p,30,,24,0.736
-6VZF1Cn2M2FqlxPoo84afo,"Please Mister Postman - Live At The BBC For ""Pop Go The Beatles"" / 30th July 1963",4On0Hf7VJC1jz5gXY2cU8p,32,,25,0.922
-6N6He3Wk0q2O0f2LRLrbil,"Beautiful Dreamer - Live At The BBC For ""Saturday Club"" / 26th January, 1963",4On0Hf7VJC1jz5gXY2cU8p,29,,26,0.809
-2DEBleXFxSOYbb1VyTy8du,"Devil In Her Heart - Live At The BBC For ""Pop Go The Beatles"" / 25th September, 1963",4On0Hf7VJC1jz5gXY2cU8p,29,,27,0.901
-0dTcNeWaYDZIvJxD2QrH4H,"The 49 Weeks - Live At The BBC For ""Pop Go The Beatles"" / 24th September, 1963",4On0Hf7VJC1jz5gXY2cU8p,0,,28,0.98
-1HfRcPdQoV3Qrzvj5sTv44,"Sure To Fall (In Love With You) - Live At The BBC For ""Pop Go The Beatles"" / 24th September, 1963",4On0Hf7VJC1jz5gXY2cU8p,28,,29,0.727
-46Yu3BKMgVmS6KhvaCWG3q,"Never Mind, Eh? - Live At The BBC For ""Pop Go The Beatles"" / 24th September, 1963",4On0Hf7VJC1jz5gXY2cU8p,27,,30,0.546
-5RByFPf1KIxItpeG3dvtBv,"Twist And Shout - Live At The BBC For ""Pop Go The Beatles"" / 6th August, 1963",4On0Hf7VJC1jz5gXY2cU8p,33,,31,0.932
-4h21X53xAByl6QeXe6Wtjy,"Bye, Bye - Live At The BBC For ""Pop Go The Beatles"" / 24th September, 1963",4On0Hf7VJC1jz5gXY2cU8p,1,,32,0
-5u5MSuBTlh364jDMzcyTWN,"John - Pop Profile - Live At The BBC / 30th November, 1965",4On0Hf7VJC1jz5gXY2cU8p,28,,33,0.819
-51UslSkGPT7TrXYIsEsWAF,"George - Pop Profile - Live At The BBC / 30th November, 1965",4On0Hf7VJC1jz5gXY2cU8p,27,,34,0.596
-7tf0cVIeb1wHHch2LadKc2,"I Saw Her Standing There - Live At The BBC For ""Saturday Club"" / 5th October, 1963",4On0Hf7VJC1jz5gXY2cU8p,31,,1,0.961
-2HXgCRmxRuROwntAqJy5Zq,"Glad All Over - Live At The BBC For ""Saturday Club"" / 24th August, 1963",4On0Hf7VJC1jz5gXY2cU8p,27,,2,0.959
-7sYQJ0KuMKC24iPt3MpXAo,"Lift Lid Again - Live At The BBC For ""Saturday Club"" / 24th August, 1963",4On0Hf7VJC1jz5gXY2cU8p,25,,3,0.864
-3DhjiN6CumibuYkQ4lI5sD,"I'll Get You - Live At The BBC For ""Saturday Club"" / 5th October, 1963",4On0Hf7VJC1jz5gXY2cU8p,28,,4,0.951
-0Xvir6Q79hoZxetCmOuUAT,"She Loves You - Live At The BBC For ""Saturday Club"" / 5th October, 1963",4On0Hf7VJC1jz5gXY2cU8p,29,,5,0.905
-1DkUmd3seTv3HZ3kfNgtxK,"Memphis, Tennessee - Live At The BBC For ""Saturday Club"" / 5th October, 1963",4On0Hf7VJC1jz5gXY2cU8p,27,,6,0.705
-2UpYmhDZVmzfdsgvLavmfj,"Happy Birthday Dear Saturday Club - Live At The BBC For ""Saturday Club"" / 5th October, 1963",4On0Hf7VJC1jz5gXY2cU8p,28,,7,0.863
-0qBskWkYJLLRsfxgAhx1wc,"Now Hush, Hush - Live At The BBC For ""Easy Beat"" / 20th October, 1963",4On0Hf7VJC1jz5gXY2cU8p,0,,8,0.432
-2W3J1ngxUu6l0rxM8Ak4qa,"From Me To You - Live At The BBC For ""Easy Beat"" / 20th October, 1963",4On0Hf7VJC1jz5gXY2cU8p,29,,9,0.792
-6PWpB4J9xKnYh71TXojz9N,"Money (That's What I Want) - Live At The BBC For ""The Beatles Say From Us To You"" / 26th December, 1963",4On0Hf7VJC1jz5gXY2cU8p,28,,10,0.961
-4EYHYNUN84Q90jUvBxerIv,"I Want To Hold Your Hand - Live At The BBC For ""The Beatles Say From Us To You"" / 26th December, 1963",4On0Hf7VJC1jz5gXY2cU8p,30,,11,0.865
-3xohbni06d89qSDGtITdlo,"Brian Bathtubes - Live At The BBC For ""Saturday Club"" / 21st December, 1963",4On0Hf7VJC1jz5gXY2cU8p,25,,12,0.795
-5AJaoXVdWEQhvYNsVfFflI,"This Boy - Live At The BBC For ""Saturday Club"" / 21st December, 1963",4On0Hf7VJC1jz5gXY2cU8p,30,,13,0.525
-4lMMyBziWO4BySGjoZFvwt,"If I Wasn’t In America - Live At The BBC For ""Saturday Club"" / 15th February, 1964",4On0Hf7VJC1jz5gXY2cU8p,25,,14,0.958
-2wWRMqKJh0Yg5gnhflDnWD,"I Got A Woman - Live At The BBC For ""Saturday Club"" / 4th April, 1964",4On0Hf7VJC1jz5gXY2cU8p,26,,15,0.772
-76EJLnjXsq38img1CneFVq,"Long Tall Sally - Live At The BBC For ""Top Gear"" / 16th July, 1964",4On0Hf7VJC1jz5gXY2cU8p,27,,16,0.782
 4aX3n1Pn6jiCbvqBL8eqyP,Love Me Do - Mono / Remastered,7vEJAtP3KgKSpOHVgwm3Eh,58,,1,0.758
 1euKWJfJSfPhgSendPrcXb,From Me To You - Mono / Remastered,7vEJAtP3KgKSpOHVgwm3Eh,59,,2,0.968
 6nEkxYIEnrbYH7h1hJ8Xn6,She Loves You - Mono / Remastered,7vEJAtP3KgKSpOHVgwm3Eh,67,,3,0.912
@@ -302,81 +252,6 @@ id,name,album_id,popularity,url,track_number,valence
 1h04XMpzGzmAudoI6VHBgA,Penny Lane - Remastered 2009,2BtE7qm1qzM80p9vLSiXkj,65,,9,0.49
 0JBvtprXP2Z0LP3jmzA7Xp,"Baby, You're A Rich Man - Remastered 2009",2BtE7qm1qzM80p9vLSiXkj,57,,10,0.467
 68BTFws92cRztMS1oQ7Ewj,All You Need Is Love - Remastered 2009,2BtE7qm1qzM80p9vLSiXkj,66,,11,0.653
-7zoJlTUGcq4zMWJoiPDwSn,Sgt. Pepper's Lonely Hearts Club Band - Remix,2gUfkZ9jhhYinKIunu7wxo,12,,1,0.516
-0eB3fPlVIqdz0X42l6HB3c,With A Little Help From My Friends - Remix,2gUfkZ9jhhYinKIunu7wxo,10,,2,0.711
-2l7StUrMq3TBNG3g92ZPLo,Lucy In The Sky With Diamonds - Remix,2gUfkZ9jhhYinKIunu7wxo,10,,3,0.425
-1853kVDomk41P3B2PD85wR,Getting Better - Remix,2gUfkZ9jhhYinKIunu7wxo,9,,4,0.799
-7agGeT7dfeRjUf8S9CZhRr,Fixing A Hole - Remix,2gUfkZ9jhhYinKIunu7wxo,7,,5,0.548
-3uL97vJsnNFru4c9k2eXf0,She's Leaving Home - Remix,2gUfkZ9jhhYinKIunu7wxo,8,,6,0.205
-1gfoktQQnT1ZP8VD8ugcbf,Being For The Benefit Of Mr. Kite! - Remix,2gUfkZ9jhhYinKIunu7wxo,7,,7,0.589
-6FIvJKb7VLeUKVXNqYmYDI,Within You Without You - Remix,2gUfkZ9jhhYinKIunu7wxo,6,,8,0.377
-5IwjRLoxRNd3dmSjtZcjAw,When I'm Sixty-Four - Remix,2gUfkZ9jhhYinKIunu7wxo,7,,9,0.587
-5ImvIyUrVT1EP3alE21S7F,Lovely Rita - Remix,2gUfkZ9jhhYinKIunu7wxo,7,,10,0.659
-3xaBPqAkq22sCNcZe1tV0V,Good Morning Good Morning - Remix,2gUfkZ9jhhYinKIunu7wxo,6,,11,0.849
-2dz3bRnbwOuKWD03cVc720,Sgt. Pepper's Lonely Hearts Club Band (Reprise) - Remix,2gUfkZ9jhhYinKIunu7wxo,8,,12,0.794
-5cmMh3PpN0A2LjAQIzBaoy,A Day In The Life - Remix,2gUfkZ9jhhYinKIunu7wxo,9,,13,0.133
-7plwLKEflIAavCajsQjeQX,Sgt. Pepper's Lonely Hearts Club Band - Take 9 And Speech,2gUfkZ9jhhYinKIunu7wxo,6,,1,0.5
-3fhGTS8IdEpLDoNDoDQPNm,With A Little Help From My Friends - Take 1 / False Start And Take 2 / Instrumental,2gUfkZ9jhhYinKIunu7wxo,5,,2,0.38
-0dPGx0uno4PBUvkfSmzUnj,Lucy In The Sky With Diamonds - Take 1,2gUfkZ9jhhYinKIunu7wxo,5,,3,0.328
-6N1cEEdyJu7tqejHQExzJj,Getting Better - Take 1 / Instrumental And Speech At The End,2gUfkZ9jhhYinKIunu7wxo,4,,4,0.33
-4n9UxoJpIY7Jb74USLNdHy,Fixing A Hole - Speech And Take 3,2gUfkZ9jhhYinKIunu7wxo,4,,5,0.641
-1R3nG4KDTjmtGlK01gh8ah,She's Leaving Home - Take 1 / Instrumental,2gUfkZ9jhhYinKIunu7wxo,4,,6,0.184
-1Pe03qt9RAB8sRirNYgqja,Being For The Benefit Of Mr. Kite! - Take 4,2gUfkZ9jhhYinKIunu7wxo,3,,7,0.536
-4ku56ynUFzqOoSzU1RRovJ,Within You Without You - Take 1 / Indian Instruments,2gUfkZ9jhhYinKIunu7wxo,3,,8,0.181
-3UvlUc5dxEVe0whDpvKSg9,When I'm Sixty-Four - Take 2,2gUfkZ9jhhYinKIunu7wxo,3,,9,0.462
-4PwL9jbHQOLuXbdWuXU4yk,Lovely Rita - Speech And Take 9,2gUfkZ9jhhYinKIunu7wxo,3,,10,0.687
-17lsrQArXWdlQw4Lrd5GNV,Good Morning Good Morning - Take 8,2gUfkZ9jhhYinKIunu7wxo,3,,11,0.804
-6UzlfJySe2hdByUzFi4Xqm,Sgt. Pepper's Lonely Hearts Club Band (Reprise) - Speech And Take 8,2gUfkZ9jhhYinKIunu7wxo,3,,12,0.727
-4UzNknJG4hfX4zeoHYPc2a,A Day In The Life - Take 1 With Hums,2gUfkZ9jhhYinKIunu7wxo,4,,13,0.192
-3tcyrloBOwJtLpHDE3shE1,Strawberry Fields Forever - Take 7,2gUfkZ9jhhYinKIunu7wxo,5,,14,0.329
-5HNcqLJ4VekKOg8MRLtZDf,Strawberry Fields Forever - Take 26,2gUfkZ9jhhYinKIunu7wxo,4,,15,0.29
-7cj2vy1gg6uSt03zqMxdQv,Strawberry Fields Forever - Stereo Mix 2015,2gUfkZ9jhhYinKIunu7wxo,5,,16,0.236
-1W2l1IgVGX54X8K3KMlP6e,Penny Lane - Take 6 / Instrumental,2gUfkZ9jhhYinKIunu7wxo,3,,17,0.147
-4evLq4XYyGXPNZUpXWI8yj,Penny Lane - Stereo Mix 2017,2gUfkZ9jhhYinKIunu7wxo,6,,18,0.623
-3J2RmOkB4VRBv4N66Nor0y,Sgt. Pepper's Lonely Hearts Club Band - Remix,6b7ycwe2rxq6FkaupNuGoS,46,,1,0.523
-2YsKxAJKUJx93BKxzQ3RTr,With A Little Help From My Friends - Remix,6b7ycwe2rxq6FkaupNuGoS,46,,2,0.794
-5od7xyJpszivAXNkBc5SL8,Lucy In The Sky With Diamonds - Remix,6b7ycwe2rxq6FkaupNuGoS,46,,3,0.423
-3liuLCzIoOhduPXp8kbHHA,Getting Better - Remix,6b7ycwe2rxq6FkaupNuGoS,42,,4,0.817
-5L3ltLBs4BQADp6FgEipr7,Fixing A Hole - Remix,6b7ycwe2rxq6FkaupNuGoS,41,,5,0.52
-3mjQT6aE0mvrffreC9OvWa,She's Leaving Home - Remix,6b7ycwe2rxq6FkaupNuGoS,42,,6,0.251
-3mMv7l7eHDHgpJqJvjXdWx,Being For The Benefit Of Mr. Kite! - Remix,6b7ycwe2rxq6FkaupNuGoS,40,,7,0.623
-0zOVNfqK09eYVHhv5N3lNY,Within You Without You - Remix,6b7ycwe2rxq6FkaupNuGoS,39,,8,0.365
-1aIwEwu8BE3s5j7hmvZRt9,When I'm Sixty-Four - Remix,6b7ycwe2rxq6FkaupNuGoS,44,,9,0.571
-3CdDBopz2XipdS5ICzhWHN,Lovely Rita - Remix,6b7ycwe2rxq6FkaupNuGoS,42,,10,0.69
-4krhZH4q9oZT86bvA4HN6F,Good Morning Good Morning - Remix,6b7ycwe2rxq6FkaupNuGoS,38,,11,0.847
-57OwEeLrTkZgqZtbM0Tsr6,Sgt. Pepper's Lonely Hearts Club Band (Reprise) - Remix,6b7ycwe2rxq6FkaupNuGoS,38,,12,0.856
-5V3HOUIcQTAdUmzHPcfb6F,A Day In The Life - Remix,6b7ycwe2rxq6FkaupNuGoS,43,,13,0.107
-1oaFPXlIXMFFgNESnW6JdZ,Sgt. Pepper's Lonely Hearts Club Band - Take 9 And Speech,6b7ycwe2rxq6FkaupNuGoS,35,,1,0.493
-2gtkJPo38dvr8JqOd1hExc,With A Little Help From My Friends - Take 1 / False Start And Take 2 / Instrumental,6b7ycwe2rxq6FkaupNuGoS,33,,2,0.385
-3BrTDY7Lpwm7UqC1pdnbaQ,Lucy In The Sky With Diamonds - Take 1,6b7ycwe2rxq6FkaupNuGoS,35,,3,0.316
-2FiSf5JfTNvAFUMiiOWUdx,Getting Better - Take 1 / Instrumental And Speech At The End,6b7ycwe2rxq6FkaupNuGoS,31,,4,0.32
-1RFpFW3Nz67JX5Obt7MlLm,Fixing A Hole - Speech And Take 3,6b7ycwe2rxq6FkaupNuGoS,31,,5,0.568
-6FsdVfBnVYANpYBHo7qezC,She's Leaving Home - Take 1 / Instrumental,6b7ycwe2rxq6FkaupNuGoS,31,,6,0.182
-5Fo2uGHAErsDwiIOo4wcjS,Being For The Benefit Of Mr. Kite! - Take 4,6b7ycwe2rxq6FkaupNuGoS,30,,7,0.507
-2EVjL6ljSRdzvHvFgCXS7K,Within You Without You - Take 1 / Indian Instruments,6b7ycwe2rxq6FkaupNuGoS,30,,8,0.175
-5UOd4rjE1TYeEQrQRTQHKv,When I'm Sixty-Four - Take 2,6b7ycwe2rxq6FkaupNuGoS,31,,9,0.426
-3RHJClIsYoZaUxt6O26GMd,Lovely Rita - Speech And Take 9,6b7ycwe2rxq6FkaupNuGoS,30,,10,0.68
-73U4muTtJcAhD94lWvD5zG,Good Morning Good Morning - Take 8,6b7ycwe2rxq6FkaupNuGoS,29,,11,0.79
-4IfD31zm39SP4hsDm9LFZ7,Sgt. Pepper's Lonely Hearts Club Band (Reprise) - Speech And Take 8,6b7ycwe2rxq6FkaupNuGoS,29,,12,0.762
-2i9KZZlTOYfX7EtMHtX5NS,A Day In The Life - Take 1 With Hums,6b7ycwe2rxq6FkaupNuGoS,33,,13,0.195
-1iVxrYU3WOaApanKwWcQqB,Strawberry Fields Forever - Take 7,6b7ycwe2rxq6FkaupNuGoS,33,,14,0.357
-0je32DnbaZ3DzrT6pVia8x,Strawberry Fields Forever - Take 26,6b7ycwe2rxq6FkaupNuGoS,31,,15,0.335
-7wvgGz8Mkz7VWpGKztBtBg,Strawberry Fields Forever - Stereo Mix 2015,6b7ycwe2rxq6FkaupNuGoS,36,,16,0.255
-4A8PQVuWGPWc8qp33aJX2U,Penny Lane - Take 6 / Instrumental,6b7ycwe2rxq6FkaupNuGoS,29,,17,0.144
-57YeN4L1zAYvnIlLwL3hp6,Penny Lane - Stereo Mix 2017,6b7ycwe2rxq6FkaupNuGoS,45,,18,0.641
-4fUKE8EULjQdHF4zb0M8FO,Sgt. Pepper's Lonely Hearts Club Band - Remastered 2009,6QaVfG1pHYl1z15ZxkvVDW,66,,1,0.583
-2RnPATK99oGOZygnD2GTO6,With A Little Help From My Friends - Remastered 2009,6QaVfG1pHYl1z15ZxkvVDW,66,,2,0.803
-25yQPHgC35WNnnOUqFhgVR,Lucy In The Sky With Diamonds - Remastered 2009,6QaVfG1pHYl1z15ZxkvVDW,68,,3,0.668
-3LtOmWpTXLhilL5odoKysR,Getting Better - Remastered 2009,6QaVfG1pHYl1z15ZxkvVDW,53,,4,0.764
-3pKKxkeB1pOUMHwWBmKc3Y,Fixing A Hole - Remastered 2009,6QaVfG1pHYl1z15ZxkvVDW,58,,5,0.619
-3PjMtNzwhDHqxoKudm6GvF,She's Leaving Home - Remastered 2009,6QaVfG1pHYl1z15ZxkvVDW,63,,6,0.393
-6W35n1UlkvqhfMZstB4BXs,Being For The Benefit Of Mr. Kite! - Remastered 2009,6QaVfG1pHYl1z15ZxkvVDW,52,,7,0.71
-3Umg8CDhO8dOSj7yBTInYb,Within You Without You - Remastered 2009,6QaVfG1pHYl1z15ZxkvVDW,59,,8,0.354
-1NrbnHlR2BFREcyWXHIHip,When I'm Sixty Four - Remastered 2009,6QaVfG1pHYl1z15ZxkvVDW,63,,9,0.661
-6h9W5FxX4E9lUFsyq8j1AD,Lovely Rita - Remastered 2009,6QaVfG1pHYl1z15ZxkvVDW,53,,10,0.63
-0xIuNHHcKI1JDuBPlSwzb1,Good Morning Good Morning - Remastered 2009,6QaVfG1pHYl1z15ZxkvVDW,50,,11,0.93
-42ocGQCOT0xYtV3f5kJDsD,Sgt. Pepper's Lonely Hearts Club Band - Reprise / Remastered 2009,6QaVfG1pHYl1z15ZxkvVDW,53,,12,0.879
-0hKRSZhUGEhKU6aNSPBACZ,A Day In The Life - Remastered 2009,6QaVfG1pHYl1z15ZxkvVDW,66,,13,0.175
 6JkioJZkImC4GRzgw5MGMO,Sgt. Pepper's Lonely Hearts Club Band - Remix,1ntNLgaYCFCkeW4flGYlY2,52,,1,0.522
 08XKCwMrwEAyyfTCTGkkhg,With A Little Help From My Friends - Remix,1ntNLgaYCFCkeW4flGYlY2,47,,2,0.75
 2iIRl5jf9beA2ExZWzn2nt,Lucy In The Sky With Diamonds - Remix,1ntNLgaYCFCkeW4flGYlY2,50,,3,0.432
