@@ -9,6 +9,7 @@
     $stmt_email = $mysqli->prepare("SELECT * FROM User WHERE email = ?;");
     $stmt_email->bind_param("s", $email);
     $stmt_signup = $mysqli->prepare("INSERT INTO User (username,password,email) VALUES (?,?,?)");
+    // $stmt_signup->bind_param("sss",$username,$password_hashed,$email);
     $stmt_signup->bind_param("sss",$username,$password1,$email);
 
 
@@ -16,6 +17,7 @@
     $username = $_POST["newUsername"];
     $password1 = $_POST["newPassword1"];
     $password2 = $_POST["newPassword2"];
+    // $password_hashed = hash('sha512', $password1);
     $email = $_POST["newEmail"];
 
 
