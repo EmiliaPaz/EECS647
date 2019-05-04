@@ -1,3 +1,10 @@
+body, html {
+  height: 100%;
+  display: grid;
+}
+
+
+
 #navbar{
     height: 30px;
 }
@@ -12,4 +19,8 @@
     height: 300px;
     margin-left: 1%;
     margin-right: 1%;
+}
+
+#sign{
+    margin: auto;
 }
