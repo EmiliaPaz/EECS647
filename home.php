@@ -17,108 +17,123 @@
     ?>
 
      <!-- Conent -->
-    <div class="accordion" id="sign">
-        <div class="card">
-            <div class="card-header" id="signin">
-                <h3>
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#signin_collapse" aria-expanded="true" aria-controls="signin_collapse">
-                        Sign in
-                    </button>
-                </h3>
-            </div>
 
-            <div id="signin_collapse" class="collapse show" aria-labelledby="signin" data-parent="#sign">
-                <div class="card-body">
+     <div class="container">
+         <div class="row">
+             <!-- <div class="home-box"> -->
+                 <div class="col-sm-12">
+
+                     <div class="accordion" id="sign">
+
+                         <div class="card">
+                             <div class="card-header" id="signin">
+                                 <h3>
+                                     <button class="btn btn-link btn-sign" type="button" data-toggle="collapse" data-target="#signin_collapse" aria-expanded="true" aria-controls="signin_collapse">
+                                         Sign in
+                                     </button>
+                                 </h3>
+                             </div>
+
+                             <div id="signin_collapse" class="collapse" aria-labelledby="signin" data-parent="#sign">
+                                 <div class="card-body">
 
 
-                    <form action="backEnd/signin.php" method="post">
-                        <div class="form-group row">
-                            <label for="item" class="col-sm-2 col-form-label">Username</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="username">
-                            </div>
-                        </div>
+                                     <form action="backEnd/signin.php" method="post">
+                                         <div class="form-group row">
+                                             <label for="item" class="col-sm-2 col-form-label">Username</label>
+                                             <div class="col-sm-10">
+                                                 <input type="text" class="form-control" name="username">
+                                             </div>
+                                         </div>
 
-                        <div class="form-group row">
-                            <label for="item" class="col-sm-2 col-form-label">Password</label>
-                            <div class="col-sm-10">
-                                <input type="password" class="form-control" name="password">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" value="Log in" class="btn btn-secondary btn-block"/>
-                        </div>
-                    </form>
+                                         <div class="form-group row">
+                                             <label for="item" class="col-sm-2 col-form-label">Password</label>
+                                             <div class="col-sm-10">
+                                                 <input type="password" class="form-control" name="password">
+                                             </div>
+                                         </div>
+                                         <div class="form-group">
+                                             <input type="submit" value="Log in" class="btn btn-secondary btn-block"/>
+                                         </div>
+                                     </form>
 
-                    <?php
-                        session_start();
-                        // Shows an error message if the login credentials are invalid
-                        if(isset($_SESSION["signin_error"])){
-                            $signin_error = $_SESSION["signin_error"];
-                            echo "<p>$signin_error</p>";
-                        }
-                        // Destroys the adminError session and its message if the page is refreshed
-                        session_destroy();
-                    ?>
+                                     <?php
+                                         session_start();
+                                         // Shows an error message if the login credentials are invalid
+                                         if(isset($_SESSION["signin_error"])){
+                                             $signin_error = $_SESSION["signin_error"];
+                                             echo "<p>$signin_error</p>";
+                                         }
+                                         // Destroys the adminError session and its message if the page is refreshed
+                                         session_destroy();
+                                     ?>
+                                 </div>
+                             </div>
+                         </div>
 
+                         <div class="card">
+                             <div class="card-header" id="signup">
+                                 <h3>
+                                     <button class="btn btn-link btn-sign" type="button" data-toggle="collapse" data-target="#signup_collapse" aria-expanded="false" aria-controls="signup_collapse">
+                                         Sign up
+                                     </button>
+                                 </h3>
+                             </div>
+                             <div id="signup_collapse" class="collapse" aria-labelledby="signup" data-parent="#sign">
+                                 <div class="card-body">
+
+                                     <form action="backEnd/signup.php" method="post">
+                                         <div class="form-group row">
+                                             <label for="item" class="col-sm-2 col-form-label">Username</label>
+                                             <div class="col-sm-10">
+                                                 <input type="text" class="form-control" name="newUsername">
+                                             </div>
+                                         </div>
+
+                                         <div class="form-group row">
+                                             <label for="item" class="col-sm-2 col-form-label">Password</label>
+                                             <div class="col-sm-10">
+                                                 <input type="password" class="form-control" name="newPassword1">
+                                             </div>
+                                         </div>
+
+                                         <div class="form-group row">
+                                             <label for="item" class="col-sm-2 col-form-label">Repeat Password</label>
+                                             <div class="col-sm-10">
+                                                 <input type="password" class="form-control" name="newPassword2">
+                                             </div>
+                                         </div>
+
+                                         <div class="form-group row">
+                                             <label for="item" class="col-sm-2 col-form-label">Email</label>
+                                             <div class="col-sm-10">
+                                                 <input type="text" class="form-control" name="newEmail">
+                                             </div>
+                                         </div>
+
+                                         <div class="form-group row">
+                                             <div class="col-sm-12">
+                                                 <input type="submit" class="btn btn-secondary btn-block" name="submit" value="Sign Up"></input>
+                                             </div>
+                                         </div>
+                                     </form>
+
+                                 </div>
+                             </div>
+                         </div>
+
+                    </div>
 
                 </div>
-            </div>
+             <!-- </div> -->
+         </div>
+     </div>
 
-        </div>
 
 
 
-        <div class="card">
-            <div class="card-header" id="signup">
-                <h3>
-                    <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#signup_collapse" aria-expanded="true" aria-controls="signup_collapse">
-                        Sign up
-                    </button>
-                </h3>
-            </div>
-            <div id="signup_collapse" class="collapse show" aria-labelledby="signup" data-parent="#sign">
-                <div class="card-body">
 
-                    <form action="backEnd/signup.php" method="post">
-                        <div class="form-group row">
-                            <label for="item" class="col-sm-2 col-form-label">Username</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="newUsername">
-                            </div>
-                        </div>
 
-                        <div class="form-group row">
-                            <label for="item" class="col-sm-2 col-form-label">Password</label>
-                            <div class="col-sm-10">
-                                <input type="password" class="form-control" name="newPassword1">
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="item" class="col-sm-2 col-form-label">Repeat Password</label>
-                            <div class="col-sm-10">
-                                <input type="password" class="form-control" name="newPassword2">
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="item" class="col-sm-2 col-form-label">Email</label>
-                            <div class="col-sm-10">
-                                <input type="text" class="form-control" name="newEmail">
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-sm-12">
-                                <input type="submit" class="btn btn-secondary btn-block" name="submit" value="Sign Up"></input>
-                            </div>
-                        </div>
-                    </form>
-
-                </div>
-            </div>
-        </div>
 
 
 

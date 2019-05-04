@@ -13,3 +13,30 @@
     margin-left: 1%;
     margin-right: 1%;
 }
+
+
+
+/*********************************  Home page *********************************/
+
+.home-box{
+    /*margin: auto;
+    position: absolute;
+    top: 0; left: 0; bottom: 0; right: 0;
+    width: 50%;
+    height: 50%;
+    min-width: 200px;
+    max-width: 400px;
+    padding: 40px;*/
+    /*display: flex;
+    width: 100%;
+    align-items: stretch;*/
+    /*display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;*/
+}
+
+.btn-sign{
+    text-align: center;
+    color: red;
+}
