@@ -36,22 +36,7 @@
         $username = $_SESSION['username'];
      ?>
 
-     <!-- Conent -->
-    <!-- <div class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm" style="text-align: center;">
-            <a href="favoriteSongs.php"> Favorite Songs </a>
-          </div>
-          <div class="col-sm" style="text-align: center;">
-            <a href="myPlaylists.php" >My Playlists</a>
-          </div>
-          <div class="col-sm"  style="text-align: center;">
-            <a href="favoriteArtists.php">Favorite Artists</a>
-          </div>
-        </div>
-      </div>
-    </div> -->
+     <!-- Content -->
 
     <!-- Recs -->
     <div class="content">
@@ -287,9 +272,20 @@
             </div>
         </div>
 
+        <div class="row">
+            <div class="col-sm dashboard-box" style="text-align: center;">
+                <a href="favoriteSongs.php"> <h3> Favorite Songs </h3> </a>
+            </div>
+            <div class="col-sm dashboard-box" style="text-align: center;">
+                <a href="myPlaylists.php" > <h3> My Playlists </h3> </a>
+            </div>
+            <div class="col-sm dashboard-box" style="text-align: center;">
+                <a href="favoriteArtists.php" > <h3> Favorite Artists </h3> </a>
+            </div>
+        </div>
 
-
-
+      </div>
+    </div>
 
     <!-- Footer -->
     <?php

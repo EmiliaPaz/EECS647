@@ -36,45 +36,50 @@
   ?>
 
       <!-- Content -->
-     <div class="content">
-         <h2> Favorite Artists </h2>
+      <div class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-sm dashboard-box" style="text-align: center;">
+              <h3> Favorite Artists </h3>
 
+               <table class="table table-hover table-borderless" >
+                   <thead >
+                       <th scope="col" class="table-header"> Name </th>
+                       <th scope="col" class="table-header"> </th>
+                   </thead>
 
-           <table class="table thead-light table-hover" >
-               <thead class="thead-light">
-                   <th scope="col"> Name </th>
-                   <th scope="col"> </th>
-               </thead>
+                   <?php
+                     $query = "SELECT Artist.stage_name FROM Artist INNER JOIN Favorite_artists ON Artist.stage_name = Favorite_artists.stage_name AND username = '$username'";
+                     if ($result = $mysqli->query($query))
+                     {
+                       while ($row = $result->fetch_assoc())
+                       {
+                         $name = $row['stage_name'];
+                         ?>
+                         <tr>
+                             <td> <?php echo $name; ?> </td>
+                             <td> <a href="backEnd/delete_artist.php?stage_name=<?php echo $name ?>"> Remove from favorites </a> </td>
+                         </tr>
+                         <?php
+                       }
+                       $result->free();
+                     }
+                   ?>
 
-               <?php
-                 $query = "SELECT Artist.stage_name FROM Artist INNER JOIN Favorite_artists ON Artist.stage_name = Favorite_artists.stage_name AND username = '$username'";
-                 if ($result = $mysqli->query($query))
-                 {
-                   while ($row = $result->fetch_assoc())
-                   {
-                     $name = $row['stage_name'];
-                     ?>
-                     <tr>
-                         <td> <?php echo $name; ?> </td>
-                         <td> <a href="backEnd/delete_artist.php?stage_name=<?php echo $name ?>"> Remove from favorites </a> </td>
-                     </tr>
-                     <?php
-                   }
-                   $result->free();
-                 }
-               ?>
+               </table>
 
-           </table>
+             <div>
+               Find artist:
+               <form action="backEnd/find_artist.php" method="post">
+                 <input type="text" name="artist_name">
+                 <input type="submit" value="Search">
+               </form>
+             </div>
+
+         </div>
+       </div>
      </div>
-
-     <div>
-       Find artist:
-       <form action="backEnd/find_artist.php" method="post">
-         <input type="text" name="artist_name">
-         <input type="submit" value="Search">
-       </form>
-     </div>
-
+   </div>
 
     <!-- Optional JavaScript -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
