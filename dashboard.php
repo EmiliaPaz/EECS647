@@ -18,24 +18,26 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- CSS -->
-    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <!-- Extra -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
+
+
 <body>
     <!-- Header -->
     <?php
         include('templates/navbar.php');
     ?>
 
-
     <?php
         session_start();
         $username = $_SESSION['username'];
      ?>
 
-
-
      <!-- Conent -->
-    <div class="content">
+    <!-- <div class="content">
       <div class="container-fluid">
         <div class="row">
           <div class="col-sm" style="text-align: center;">
@@ -49,19 +51,19 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
 
     <!-- Recs -->
     <div class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-sm" style="text-align: center;">
+          <div class="col-sm dashboard-box" style="text-align: center;">
             <h3> Songs You May Like </h3>
-                  <table class="table thead-light table-hover" >
-                      <thead class="thead-light">
-                          <th scope="col"> Title </th>
-                          <th scope="col"> Preview </th>
-                          <th scope="col"> </th>
+                  <table class="table table-hover table-borderless" >
+                      <thead>
+                          <th scope="col" class="table-header"> Title </th>
+                          <th scope="col" class="table-header"> Preview </th>
+                          <th scope="col" class="table-header"> </th>
                       </thead>
 
                       <?php
@@ -98,13 +100,13 @@
 
                   </table>
           </div>
-          <div class="col-sm" style="text-align: center;">
+          <div class="col-sm dashboard-box" style="text-align: center;">
             <h3> Hidden Gems </h3>
-            <table class="table thead-light table-hover" >
-                <thead class="thead-light">
-                    <th scope="col"> Title </th>
-                    <th scope="col"> Preview </th>
-                    <th scope="col"> </th>
+            <table class="table table-hover table-borderless" >
+                <thead>
+                    <th scope="col" class="table-header"> Title </th>
+                    <th scope="col" class="table-header"> Preview </th>
+                    <th scope="col" class="table-header"> </th>
                 </thead>
 
                 <?php
@@ -141,12 +143,12 @@
 
             </table>
           </div>
-          <div class="col-sm"  style="text-align: center;">
+          <div class="col-sm dashboard-box"  style="text-align: center;">
             <h3> Artists You May Like </h3>
-            <table class="table thead-light table-hover" >
-                <thead class="thead-light">
-                    <th scope="col"> Name </th>
-                    <th scope="col"> </th>
+            <table class="table table-hover table-borderless" >
+                <thead>
+                    <th scope="col" class="table-header"> Name </th>
+                    <th scope="col" class="table-header"> </th>
                 </thead>
 
                 <?php
@@ -178,99 +180,116 @@
             </table>
           </div>
         </div>
-      </div>
 
-    <!-- mood -->
-    <div class="content">
-      <div class="container-fluid">
         <div class="row">
-          <div class="col-sm" style="text-align: center;">
-            <h3> Moods </h3>
-            <table class="table thead-light table-hover" >
-                <thead class="thead-light">
-                    <th scope="col"> Mood </th>
-                    <th scope="col">  Title</th>
-                    <th scope="col">  Title</th>
-                    <th scope="col">  </th>
-                </thead>
+            <div class="col-sm dashboard-box" style="text-align: center;">
+                <h3> Moods </h3>
 
-                <?php
-                  $query = "SELECT Song.song_id, Song.name, Song.url\n"
-                          . "FROM Song\n"
-                          . "WHERE Song.valence > 0.65\n"
-                          . "ORDER BY RAND()\n"
-                          . "LIMIT 1";
-                  if ($result = $mysqli->query($query))
-                  {
-                    while ($row = $result->fetch_assoc())
-                    {
-                      $song_id = $row['song_id'];
-                      $title = $row['name'];
-                      $url = $row['url'];
-                      ?>
-                      <tr>
-                          <td> Positive </td>
-                          <td> <?php echo $title; ?> </td>
-                          <td> <a href="<?php echo $url; ?>" target="_blank"> Listen </a>  </td>
-                          <td> <a href="backEnd/add_song.php?song_id=<?php echo $song_id ?>"> Add favorite </a> </td>
-                      </tr>
-                      <?php
-                    }
-                    $result->free();
-                  }
-                  $query = "SELECT Song.song_id, Song.name, Song.url\n"
-                          . "FROM Song\n"
-                          . "WHERE Song.valence BETWEEN 0.35 AND 0.65\n"
-                          . "ORDER BY RAND()\n"
-                          . "LIMIT 1";
-                  if ($result = $mysqli->query($query))
-                  {
-                    while ($row = $result->fetch_assoc())
-                    {
-                      $song_id = $row['song_id'];
-                      $title = $row['name'];
-                      $url = $row['url'];
-                      ?>
-                      <tr>
-                          <td> Neutral </td>
-                          <td> <?php echo $title; ?> </td>
-                          <td> <a href="<?php echo $url; ?>" target="_blank"> Listen </a>  </td>
-                          <td> <a href="backEnd/add_song.php?song_id=<?php echo $song_id ?>"> Add favorite </a> </td>
-                      </tr>
-                      <?php
-                    }
-                    $result->free();
-                  }
-                  $query = "SELECT Song.song_id, Song.name, Song.url\n"
-                          . "FROM Song\n"
-                          . "WHERE Song.valence < 0.35\n"
-                          . "ORDER BY RAND()\n"
-                          . "LIMIT 1";
-                  if ($result = $mysqli->query($query))
-                  {
-                    while ($row = $result->fetch_assoc())
-                    {
-                      $song_id = $row['song_id'];
-                      $title = $row['name'];
-                      $url = $row['url'];
-                      ?>
-                      <tr>
-                          <td> Negative </td>
-                          <td> <?php echo $title; ?> </td>
-                          <td> <a href="<?php echo $url; ?>" target="_blank"> Listen </a>  </td>
-                          <td> <a href="backEnd/add_song.php?song_id=<?php echo $song_id ?>"> Add favorite </a> </td>
-                      </tr>
-                      <?php
-                    }
-                    $result->free();
-                  }
-                ?>
+                <div class="btn-group btn-moods btn-block" role="group" aria-label="Basic example">
+                    <button type="button" class="btn btn-secondary btn-mood" data-toggle="collapse" href="#happy" aria-expanded="false" aria-controls="happy"> <i class="fas fa-laugh fa-5x"></i></button>
+                    <button type="button" class="btn btn-secondary btn-mood" data-toggle="collapse" href="#neutral" aria-expanded="false" aria-controls="neutral"> <i class="fas fa-meh fa-5x"></i></button>
+                    <button type="button" class="btn btn-secondary btn-mood" data-toggle="collapse" href="#sad" aria-expanded="false" aria-controls="sad"> <i class="fas fa-sad-cry fa-5x"></i></button>
+                </div>
 
-            </table>
-          </div>
+                <div class="collapse multi-collapse " id="happy">
+                  <div class="card card-body">
+                      <table class="table table-hover table-borderless song-mood" >
+                          <?php
+                            $query = "SELECT Song.song_id, Song.name, Song.url\n"
+                                    . "FROM Song\n"
+                                    . "WHERE Song.valence > 0.65\n"
+                                    . "ORDER BY RAND()\n"
+                                    . "LIMIT 1";
+                            if ($result = $mysqli->query($query))
+                            {
+                              while ($row = $result->fetch_assoc())
+                              {
+                                $song_id = $row['song_id'];
+                                $title = $row['name'];
+                                $url = $row['url'];
+                                ?>
+                                <tr>
+                                    <td> <?php echo $title; ?> </td>
+                                    <td> <a href="<?php echo $url; ?>" target="_blank"> Listen </a>  </td>
+                                    <td> <a href="backEnd/add_song.php?song_id=<?php echo $song_id ?>"> Add favorite </a> </td>
+                                </tr>
+                                <?php
+                              }
+                              $result->free();
+                            }
+                            ?>
+                        </table>
+                  </div>
+                </div>
+
+                <div class="collapse multi-collapse song-mood" id="neutral">
+                  <div class="card card-body">
+                      <table class="table table-hover table-borderless song-mood" >
+                          <?php
+                          $query = "SELECT Song.song_id, Song.name, Song.url\n"
+                                  . "FROM Song\n"
+                                  . "WHERE Song.valence BETWEEN 0.35 AND 0.65\n"
+                                  . "ORDER BY RAND()\n"
+                                  . "LIMIT 1";
+                            if ($result = $mysqli->query($query))
+                            {
+                              while ($row = $result->fetch_assoc())
+                              {
+                                $song_id = $row['song_id'];
+                                $title = $row['name'];
+                                $url = $row['url'];
+                                ?>
+                                <tr>
+                                    <td> <?php echo $title; ?> </td>
+                                    <td> <a href="<?php echo $url; ?>" target="_blank"> Listen </a>  </td>
+                                    <td> <a href="backEnd/add_song.php?song_id=<?php echo $song_id ?>"> Add favorite </a> </td>
+                                </tr>
+                                <?php
+                              }
+                              $result->free();
+                            }
+                            ?>
+                        </table>
+                  </div>
+                </div>
+
+                <div class="collapse multi-collapse song-mood" id="sad">
+                  <div class="card card-body">
+                      <table class="table table-hover table-borderless song-mood" >
+                          <?php
+                          $query = "SELECT Song.song_id, Song.name, Song.url\n"
+                                  . "FROM Song\n"
+                                  . "WHERE Song.valence BETWEEN 0.35 AND 0.65\n"
+                                  . "ORDER BY RAND()\n"
+                                  . "LIMIT 1";
+                            if ($result = $mysqli->query($query))
+                            {
+                              while ($row = $result->fetch_assoc())
+                              {
+                                $song_id = $row['song_id'];
+                                $title = $row['name'];
+                                $url = $row['url'];
+                                ?>
+                                <tr>
+                                    <td> <?php echo $title; ?> </td>
+                                    <td> <a href="<?php echo $url; ?>" target="_blank"> Listen </a>  </td>
+                                    <td> <a href="backEnd/add_song.php?song_id=<?php echo $song_id ?>"> Add favorite </a> </td>
+                                </tr>
+                                <?php
+                              }
+                              $result->free();
+                            }
+                            ?>
+                        </table>
+                  </div>
+                </div>
+
+            </div>
         </div>
-      </div>
-    </div>
+
+
+
+
 
     <!-- Footer -->
     <?php
