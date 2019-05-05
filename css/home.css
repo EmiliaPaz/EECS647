@@ -1,0 +1,56 @@
+/*********************************  Home page *********************************/
+body{
+    background-color: #022735;
+    color: #022735;
+    font-family: 'Lato', sans-serif;
+}
+.sign-box{
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 800px;
+    height: 500px;
+}
+
+
+.accordion {
+  max-width: 800px;
+  margin: 50px auto;
+  box-shadow: 0 0 1px rgba(0,0,0,0.1);
+}
+
+.accordion .card,
+.accordion .card:last-child .card-header {
+  border: none;
+}
+
+.accordion .card-header {
+  background-color: #efb22d;
+}
+
+.accordion .card-body {
+  background-color: #f4ce79;
+}
+
+.accordion .btn {
+  width: 100%;
+  font-weight: bold;
+  color: #022735;
+  padding: 0;
+}
+
+.accordion .btn-link:hover,
+.accordion .btn-link:focus {
+  text-decoration: none;
+}
+
+
+.accordion .btn-submit{
+    color: white;
+    background-color: #022735;
+    border-style: none;
+
+}

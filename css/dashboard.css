@@ -1,0 +1,59 @@
+body{
+    background-color: white;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+h3{
+    color: #efb22d;
+    padding-top: 10px;
+}
+
+#navbar{
+    height: 30px;
+}
+
+.content{
+    margin-top: 40px;
+}
+
+.dashboard-button{
+    width: 100%;
+    background-color: #FFD500;
+    height: 300px;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.table{
+    color: white;
+    border: none;
+}
+
+.table-header{
+    background-color: white;
+    color: #022735;
+}
+
+
+/************************************ Box ************************************/
+.dashboard-box{
+    background-color: #022735;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+
+/************************************ Moods ************************************/
+.btn-moods{
+    height: 125px;
+}
+
+.btn-mood{
+    margin: 10px;
+    background-color: #efb22d;
+}
+
+.song-mood{
+    background-color: #022735;
+}
