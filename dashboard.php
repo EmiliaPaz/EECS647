@@ -40,11 +40,18 @@
 
     <!-- Recs -->
     <div class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm dashboard-box" style="text-align: center;">
-            <h3> Songs You May Like </h3>
-                  <table class="table table-hover table-borderless" >
+        <div class="container-fluid">
+
+            <div class="row">
+                 <div class="col-sm" style="text-align: center;">
+                     <h1> Dashboard </h1>
+                 </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm dashboard-box" style="text-align: center;">
+                    <h3> Songs You May Like </h3>
+                    <table class="table table-hover table-borderless" >
                       <thead>
                           <th scope="col" class="table-header"> Title </th>
                           <th scope="col" class="table-header"> Preview </th>
@@ -83,91 +90,93 @@
                         }
                       ?>
 
-                  </table>
-          </div>
-          <div class="col-sm dashboard-box" style="text-align: center;">
-            <h3> Hidden Gems </h3>
-            <table class="table table-hover table-borderless" >
-                <thead>
-                    <th scope="col" class="table-header"> Title </th>
-                    <th scope="col" class="table-header"> Preview </th>
-                    <th scope="col" class="table-header"> </th>
-                </thead>
+                    </table>
+                </div>
 
-                <?php
-                  $query = "SELECT DISTINCT Song_genre.song_id, Song_genre.name, Song.url\n"
-                          . "FROM Song_genre\n"
-                          . "INNER JOIN Song\n"
-                          . "ON Song_genre.song_id = Song.song_id\n"
-                          . "AND Song.popularity BETWEEN 30 AND 60\n"
-                          . "INNER JOIN User_genre\n"
-                          . "ON Song_genre.genre = User_genre.genre\n"
-                          . "AND User_genre.username = '$username'\n"
-                          . "AND Song_genre.song_id NOT IN\n"
-                          . "(SELECT fs.song_id FROM Favorite_songs fs WHERE fs.username = '$username')\n"
-                          . "ORDER BY RAND()\n"
-                          . "LIMIT 10";
-                  if ($result = $mysqli->query($query))
-                  {
-                    while ($row = $result->fetch_assoc())
-                    {
-                      $song_id= $row['song_id'];
-                      $title = $row['name'];
-                      $url = $row['url'];
-                      ?>
-                      <tr>
-                          <td> <?php echo $title; ?> </td>
-                          <td> <a href="<?php echo $url; ?>" target="_blank"> Listen </a>  </td>
-                          <td> <a href="backEnd/add_song.php?song_id=<?php echo $song_id ?>"> Add favorite </a> </td>
-                      </tr>
-                      <?php
-                    }
-                    $result->free();
-                  }
-                ?>
+                <div class="col-sm dashboard-box" style="text-align: center;">
+                    <h3> Hidden Gems </h3>
+                    <table class="table table-hover table-borderless" >
+                        <thead>
+                            <th scope="col" class="table-header"> Title </th>
+                            <th scope="col" class="table-header"> Preview </th>
+                            <th scope="col" class="table-header"> </th>
+                        </thead>
 
-            </table>
-          </div>
-          <div class="col-sm dashboard-box"  style="text-align: center;">
-            <h3> Artists You May Like </h3>
-            <table class="table table-hover table-borderless" >
-                <thead>
-                    <th scope="col" class="table-header"> Name </th>
-                    <th scope="col" class="table-header"> </th>
-                </thead>
+                        <?php
+                          $query = "SELECT DISTINCT Song_genre.song_id, Song_genre.name, Song.url\n"
+                                  . "FROM Song_genre\n"
+                                  . "INNER JOIN Song\n"
+                                  . "ON Song_genre.song_id = Song.song_id\n"
+                                  . "AND Song.popularity BETWEEN 30 AND 60\n"
+                                  . "INNER JOIN User_genre\n"
+                                  . "ON Song_genre.genre = User_genre.genre\n"
+                                  . "AND User_genre.username = '$username'\n"
+                                  . "AND Song_genre.song_id NOT IN\n"
+                                  . "(SELECT fs.song_id FROM Favorite_songs fs WHERE fs.username = '$username')\n"
+                                  . "ORDER BY RAND()\n"
+                                  . "LIMIT 10";
+                          if ($result = $mysqli->query($query))
+                          {
+                            while ($row = $result->fetch_assoc())
+                            {
+                              $song_id= $row['song_id'];
+                              $title = $row['name'];
+                              $url = $row['url'];
+                              ?>
+                              <tr>
+                                  <td> <?php echo $title; ?> </td>
+                                  <td> <a href="<?php echo $url; ?>" target="_blank"> Listen </a>  </td>
+                                  <td> <a href="backEnd/add_song.php?song_id=<?php echo $song_id ?>"> Add favorite </a> </td>
+                              </tr>
+                              <?php
+                            }
+                            $result->free();
+                          }
+                        ?>
 
-                <?php
-                  $query = "SELECT DISTINCT Artist_genre.stage_name\n"
-                        . "FROM Artist_genre\n"
-                        . "INNER JOIN User_genre\n"
-                        . "ON Artist_genre.genre = User_genre.genre\n"
-                        . "AND User_genre.username = '$username'\n"
-                        . "AND Artist_genre.stage_name NOT IN\n"
-                        . "(SELECT fa.stage_name FROM Favorite_artists fa WHERE fa.username = '$username')\n"
-                        . "ORDER BY RAND()\n"
-                        . "LIMIT 10";
-                  if ($result = $mysqli->query($query))
-                  {
-                    while ($row = $result->fetch_assoc())
-                    {
-                      $stage_name = $row['stage_name'];
-                      ?>
-                      <tr>
-                          <td> <?php echo $stage_name; ?> </td>
-                          <td> <a href="backEnd/add_artist.php?stage_name=<?php echo $stage_name ?>"> Add favorite </a> </td>
-                      </tr>
-                      <?php
-                    }
-                    $result->free();
-                  }
-                ?>
+                    </table>
+                  </div>
 
-            </table>
-          </div>
-        </div>
+                <div class="col-sm dashboard-box"  style="text-align: center;">
+                    <h3> Artists You May Like </h3>
+                    <table class="table table-hover table-borderless" >
+                        <thead>
+                            <th scope="col" class="table-header"> Name </th>
+                            <th scope="col" class="table-header"> </th>
+                        </thead>
 
-        <div class="row">
-            <div class="col-sm dashboard-box" style="text-align: center;">
+                        <?php
+                          $query = "SELECT DISTINCT Artist_genre.stage_name\n"
+                                . "FROM Artist_genre\n"
+                                . "INNER JOIN User_genre\n"
+                                . "ON Artist_genre.genre = User_genre.genre\n"
+                                . "AND User_genre.username = '$username'\n"
+                                . "AND Artist_genre.stage_name NOT IN\n"
+                                . "(SELECT fa.stage_name FROM Favorite_artists fa WHERE fa.username = '$username')\n"
+                                . "ORDER BY RAND()\n"
+                                . "LIMIT 10";
+                          if ($result = $mysqli->query($query))
+                          {
+                            while ($row = $result->fetch_assoc())
+                            {
+                              $stage_name = $row['stage_name'];
+                              ?>
+                              <tr>
+                                  <td> <?php echo $stage_name; ?> </td>
+                                  <td> <a href="backEnd/add_artist.php?stage_name=<?php echo $stage_name ?>"> Add favorite </a> </td>
+                              </tr>
+                              <?php
+                            }
+                            $result->free();
+                          }
+                        ?>
+
+                    </table>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-sm dashboard-box" style="text-align: center;">
                 <h3> Moods </h3>
 
                 <div class="btn-group btn-moods btn-block" role="group" aria-label="Basic example">
@@ -270,21 +279,21 @@
                 </div>
 
             </div>
-        </div>
+            </div>
 
-        <div class="row">
-            <div class="col-sm dashboard-box" style="text-align: center;">
-                <a href="favoriteSongs.php"> <h3> Favorite Songs </h3> </a>
+            <div class="row">
+                <div class="col-sm dashboard-box" style="text-align: center;">
+                    <a href="favoriteSongs.php"> <h3> Favorite Songs </h3> </a>
+                </div>
+                <div class="col-sm dashboard-box" style="text-align: center;">
+                    <a href="myPlaylists.php" > <h3> My Playlists </h3> </a>
+                </div>
+                <div class="col-sm dashboard-box" style="text-align: center;">
+                    <a href="favoriteArtists.php" > <h3> Favorite Artists </h3> </a>
+                </div>
             </div>
-            <div class="col-sm dashboard-box" style="text-align: center;">
-                <a href="myPlaylists.php" > <h3> My Playlists </h3> </a>
-            </div>
-            <div class="col-sm dashboard-box" style="text-align: center;">
-                <a href="favoriteArtists.php" > <h3> Favorite Artists </h3> </a>
-            </div>
-        </div>
 
-      </div>
+        </div>
     </div>
 
     <!-- Footer -->

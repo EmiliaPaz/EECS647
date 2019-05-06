@@ -7,13 +7,12 @@
 
     // Statements
     $stmt_signin = $mysqli->prepare("SELECT * FROM User WHERE username= ? AND password= ?");
-    // $stmt_signin->bind_param("ss",$username,$password_hashed);
-    $stmt_signin->bind_param("ss",$username,$password);
+    $stmt_signin->bind_param("ss",$username,$password_hashed);
 
     // Variables
     $username = $_POST["username"];
     $password = $_POST["password"];
-    // $password_hashed = hash('sha512',$password);
+    $password_hashed = hash('sha512',$password);
 
     // Sign in
     $stmt_signin->execute();

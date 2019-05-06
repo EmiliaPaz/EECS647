@@ -69,7 +69,7 @@
                                                  $signin_error = $_SESSION["signin_error"];
                                                  echo "<p>$signin_error</p>";
                                              }
-                                             // Destroys the adminError session and its message if the page is refreshed
+                                             // Destroys the sign in session and its message if the page is refreshed
                                              session_destroy();
                                          ?>
                                      </div>
@@ -126,6 +126,17 @@
                                                  </div>
                                              </div>
                                          </form>
+
+                                         <?php
+                                             session_start();
+                                             // Shows an error message if the login credentials are invalid
+                                             if(isset($_SESSION["signup_msg"])){
+                                                 $signup_msg = $_SESSION["signup_msg"];
+                                                 echo "<p>$signup_msg</p>";
+                                             }
+                                             // Destroys the sign in session and its message if the page is refreshed
+                                             session_destroy();
+                                         ?>
 
                                      </div>
                                  </div>
