@@ -32,8 +32,6 @@
         $username = $_SESSION['username'];
      ?>
 
-
-
      <!-- Conent -->
     <div class="content">
       <div class="container-fluid">
