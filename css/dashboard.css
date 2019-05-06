@@ -7,7 +7,8 @@ body{
 
 
 #navbar{
-    height: 30px;
+    height: 60px;
+    background-color: #5e757e;
 }
 
 .content{
@@ -72,6 +73,10 @@ h3{
 }
 
 .song-mood{
+    background-color: #022735;
+}
+
+.box-mood{
     background-color: #022735;
 }
 

@@ -84,29 +84,29 @@
                     <h4> Change email </h4>
                     <form class="form-sell" action="backEnd/changeEmail.php" method="post">
                         <div class="form-group row">
-                            <label for="item" class="col-sm-2 col-form-label">Old email</label>
-                            <div class="col-sm-10">
+                            <label for="item" class="col-sm-3 col-form-label">Old email</label>
+                            <div class="col-sm-9">
                                 <input type="email" class="form-control" id="oldEmail1" name="oldEmail1" value="<?php echo $email ?>"   readonly>
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="item" class="col-sm-2 col-form-label">Repeat old email</label>
-                            <div class="col-sm-10">
+                            <label for="item" class="col-sm-3 col-form-label">Repeat old email</label>
+                            <div class="col-sm-9">
                                 <input type="email" class="form-control" id="oldEmail2" name="oldEmail2">
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="description" class="col-sm-2 col-form-label">New email</label>
-                            <div class="col-sm-10">
+                            <label for="description" class="col-sm-3 col-form-label">New email</label>
+                            <div class="col-sm-9">
                                 <input type="email" class="form-control" id="newEmail1" name="newEmail1">
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="description" class="col-sm-2 col-form-label">Repeat new email</label>
-                            <div class="col-sm-10">
+                            <label for="description" class="col-sm-3 col-form-label">Repeat new email</label>
+                            <div class="col-sm-9">
                                 <input type="email" class="form-control" id="newEmail2" name="newEmail2">
                             </div>
                         </div>
@@ -121,29 +121,29 @@
                     <h4> Change password </h4>
                     <form class="form-sell" action="backEnd/changePassword.php" method="post">
                         <div class="form-group row">
-                            <label for="item" class="col-sm-2 col-form-label">Old password</label>
-                            <div class="col-sm-10">
+                            <label for="item" class="col-sm-3 col-form-label">Old password</label>
+                            <div class="col-sm-9">
                                 <input type="password" class="form-control" id="oldPassword1" name="oldPassword1" value="********"   readonly>
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="item" class="col-sm-2 col-form-label">Repeat old email</label>
-                            <div class="col-sm-10">
+                            <label for="item" class="col-sm-3 col-form-label">Repeat old password</label>
+                            <div class="col-sm-9">
                                 <input type="password" class="form-control" id="oldPassword2" name="oldPassword2">
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="description" class="col-sm-2 col-form-label">New email</label>
-                            <div class="col-sm-10">
+                            <label for="description" class="col-sm-3 col-form-label">New password</label>
+                            <div class="col-sm-9">
                                 <input type="password" class="form-control" id="newPassword1" name="newPassword1">
                             </div>
                         </div>
 
                         <div class="form-group row">
-                            <label for="description" class="col-sm-2 col-form-label">Repeat new email</label>
-                            <div class="col-sm-10">
+                            <label for="description" class="col-sm-3 col-form-label">Repeat new password</label>
+                            <div class="col-sm-9">
                                 <input type="password" class="form-control" id="newPassword2" name="newPassword2">
                             </div>
                         </div>

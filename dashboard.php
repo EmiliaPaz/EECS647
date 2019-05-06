@@ -175,111 +175,137 @@
                 </div>
             </div>
 
+            <!-- Moods -->
             <div class="row">
                 <div class="col-sm dashboard-box" style="text-align: center;">
-                <h3> Moods </h3>
+                    <h3> Moods </h3>
 
-                <div class="btn-group btn-moods btn-block" role="group" aria-label="Basic example">
-                    <button type="button" class="btn btn-secondary btn-mood" data-toggle="collapse" href="#happy" aria-expanded="false" aria-controls="happy"> <i class="fas fa-laugh fa-5x"></i></button>
-                    <button type="button" class="btn btn-secondary btn-mood" data-toggle="collapse" href="#neutral" aria-expanded="false" aria-controls="neutral"> <i class="fas fa-meh fa-5x"></i></button>
-                    <button type="button" class="btn btn-secondary btn-mood" data-toggle="collapse" href="#sad" aria-expanded="false" aria-controls="sad"> <i class="fas fa-sad-cry fa-5x"></i></button>
+                    <div class="btn-group btn-moods btn-block" role="group" aria-label="Basic example">
+                        <button type="button" class="btn btn-secondary btn-mood" data-toggle="collapse" href="#happy" aria-expanded="false" aria-controls="happy"> <i class="fas fa-laugh fa-5x"></i></button>
+                        <button type="button" class="btn btn-secondary btn-mood" data-toggle="collapse" href="#neutral" aria-expanded="false" aria-controls="neutral"> <i class="fas fa-meh fa-5x"></i></button>
+                        <button type="button" class="btn btn-secondary btn-mood" data-toggle="collapse" href="#sad" aria-expanded="false" aria-controls="sad"> <i class="fas fa-sad-cry fa-5x"></i></button>
+                    </div>
+
+
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="collapse multi-collapse" id="happy">
+                                <div class="card card-body box-mood">
+                                    <table class="table table-hover table-borderless song-mood" >
+                                        <thead>
+                                            <th scope="col" class="table-header"> Title </th>
+                                            <th scope="col" class="table-header"> Preview </th>
+                                            <th scope="col" class="table-header"> </th>
+                                        </thead>
+                                        <?php
+                                          $query = "SELECT Song.song_id, Song.name, Song.url\n"
+                                                  . "FROM Song\n"
+                                                  . "WHERE Song.valence > 0.65\n"
+                                                  . "ORDER BY RAND()\n"
+                                                  . "LIMIT 1";
+                                          if ($result = $mysqli->query($query))
+                                          {
+                                            while ($row = $result->fetch_assoc())
+                                            {
+                                              $song_id = $row['song_id'];
+                                              $title = $row['name'];
+                                              $url = $row['url'];
+                                              ?>
+                                              <tr>
+                                                  <td> <?php echo $title; ?> </td>
+                                                  <td> <a href="<?php echo $url; ?>" target="_blank"> Listen </a>  </td>
+                                                  <td> <a href="backEnd/add_song.php?song_id=<?php echo $song_id ?>"> Add favorite </a> </td>
+                                              </tr>
+                                              <?php
+                                            }
+                                            $result->free();
+                                          }
+                                          ?>
+                                      </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="collapse multi-collapse" id="neutral">
+                                <div class="card card-body box-mood">
+                                    <table class="table table-hover table-borderless song-mood" >
+                                        <thead>
+                                            <th scope="col" class="table-header"> Title </th>
+                                            <th scope="col" class="table-header"> Preview </th>
+                                            <th scope="col" class="table-header"> </th>
+                                        </thead>
+                                        <?php
+                                        $query = "SELECT Song.song_id, Song.name, Song.url\n"
+                                                . "FROM Song\n"
+                                                . "WHERE Song.valence BETWEEN 0.35 AND 0.65\n"
+                                                . "ORDER BY RAND()\n"
+                                                . "LIMIT 1";
+                                          if ($result = $mysqli->query($query))
+                                          {
+                                            while ($row = $result->fetch_assoc())
+                                            {
+                                              $song_id = $row['song_id'];
+                                              $title = $row['name'];
+                                              $url = $row['url'];
+                                              ?>
+                                              <tr>
+                                                  <td> <?php echo $title; ?> </td>
+                                                  <td> <a href="<?php echo $url; ?>" target="_blank"> Listen </a>  </td>
+                                                  <td> <a href="backEnd/add_song.php?song_id=<?php echo $song_id ?>"> Add favorite </a> </td>
+                                              </tr>
+                                              <?php
+                                            }
+                                            $result->free();
+                                          }
+                                          ?>
+                                      </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col">
+                            <div class="collapse multi-collapse" id="sad">
+                                <div class="card card-body box-mood">
+                                    <table class="table table-hover table-borderless song-mood" >
+                                        <thead>
+                                            <th scope="col" class="table-header"> Title </th>
+                                            <th scope="col" class="table-header"> Preview </th>
+                                            <th scope="col" class="table-header"> </th>
+                                        </thead>
+                                        <?php
+                                        $query = "SELECT Song.song_id, Song.name, Song.url\n"
+                                                . "FROM Song\n"
+                                                . "WHERE Song.valence BETWEEN 0.35 AND 0.65\n"
+                                                . "ORDER BY RAND()\n"
+                                                . "LIMIT 1";
+                                          if ($result = $mysqli->query($query))
+                                          {
+                                            while ($row = $result->fetch_assoc())
+                                            {
+                                              $song_id = $row['song_id'];
+                                              $title = $row['name'];
+                                              $url = $row['url'];
+                                              ?>
+                                              <tr>
+                                                  <td> <?php echo $title; ?> </td>
+                                                  <td> <a href="<?php echo $url; ?>" target="_blank"> Listen </a>  </td>
+                                                  <td> <a href="backEnd/add_song.php?song_id=<?php echo $song_id ?>"> Add favorite </a> </td>
+                                              </tr>
+                                              <?php
+                                            }
+                                            $result->free();
+                                          }
+                                          ?>
+                                      </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
-                <div class="collapse multi-collapse " id="happy">
-                  <div class="card card-body">
-                      <table class="table table-hover table-borderless song-mood" >
-                          <?php
-                            $query = "SELECT Song.song_id, Song.name, Song.url\n"
-                                    . "FROM Song\n"
-                                    . "WHERE Song.valence > 0.65\n"
-                                    . "ORDER BY RAND()\n"
-                                    . "LIMIT 1";
-                            if ($result = $mysqli->query($query))
-                            {
-                              while ($row = $result->fetch_assoc())
-                              {
-                                $song_id = $row['song_id'];
-                                $title = $row['name'];
-                                $url = $row['url'];
-                                ?>
-                                <tr>
-                                    <td> <?php echo $title; ?> </td>
-                                    <td> <a href="<?php echo $url; ?>" target="_blank"> Listen </a>  </td>
-                                    <td> <a href="backEnd/add_song.php?song_id=<?php echo $song_id ?>"> Add favorite </a> </td>
-                                </tr>
-                                <?php
-                              }
-                              $result->free();
-                            }
-                            ?>
-                        </table>
-                  </div>
-                </div>
-
-                <div class="collapse multi-collapse song-mood" id="neutral">
-                  <div class="card card-body">
-                      <table class="table table-hover table-borderless song-mood" >
-                          <?php
-                          $query = "SELECT Song.song_id, Song.name, Song.url\n"
-                                  . "FROM Song\n"
-                                  . "WHERE Song.valence BETWEEN 0.35 AND 0.65\n"
-                                  . "ORDER BY RAND()\n"
-                                  . "LIMIT 1";
-                            if ($result = $mysqli->query($query))
-                            {
-                              while ($row = $result->fetch_assoc())
-                              {
-                                $song_id = $row['song_id'];
-                                $title = $row['name'];
-                                $url = $row['url'];
-                                ?>
-                                <tr>
-                                    <td> <?php echo $title; ?> </td>
-                                    <td> <a href="<?php echo $url; ?>" target="_blank"> Listen </a>  </td>
-                                    <td> <a href="backEnd/add_song.php?song_id=<?php echo $song_id ?>"> Add favorite </a> </td>
-                                </tr>
-                                <?php
-                              }
-                              $result->free();
-                            }
-                            ?>
-                        </table>
-                  </div>
-                </div>
-
-                <div class="collapse multi-collapse song-mood" id="sad">
-                  <div class="card card-body">
-                      <table class="table table-hover table-borderless song-mood" >
-                          <?php
-                          $query = "SELECT Song.song_id, Song.name, Song.url\n"
-                                  . "FROM Song\n"
-                                  . "WHERE Song.valence BETWEEN 0.35 AND 0.65\n"
-                                  . "ORDER BY RAND()\n"
-                                  . "LIMIT 1";
-                            if ($result = $mysqli->query($query))
-                            {
-                              while ($row = $result->fetch_assoc())
-                              {
-                                $song_id = $row['song_id'];
-                                $title = $row['name'];
-                                $url = $row['url'];
-                                ?>
-                                <tr>
-                                    <td> <?php echo $title; ?> </td>
-                                    <td> <a href="<?php echo $url; ?>" target="_blank"> Listen </a>  </td>
-                                    <td> <a href="backEnd/add_song.php?song_id=<?php echo $song_id ?>"> Add favorite </a> </td>
-                                </tr>
-                                <?php
-                              }
-                              $result->free();
-                            }
-                            ?>
-                        </table>
-                  </div>
-                </div>
-
             </div>
-            </div>
+            <!--  End Moods -->
 
             <div class="row">
                 <div class="col-sm dashboard-box" style="text-align: center;">
