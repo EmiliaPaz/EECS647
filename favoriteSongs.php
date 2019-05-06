@@ -15,7 +15,9 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- CSS -->
-    <link rel="stylesheet" href="css/general.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <!-- Extra -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 </head>
 
 
@@ -36,17 +38,21 @@
     ?>
 
      <!-- Content -->
-    <div class="content">
-        <h2> Favorite Songs </h2>
+     <div class="content">
+       <div class="container-fluid">
+         <div class="row">
+           <div class="col-sm dashboard-box" style="text-align: center;">
+             <h3> Favorite Songs </h3>
+
 
         <!-- <form action="backEnd/delete_song.php" method="post"> -->
-            <table class="table thead-light table-hover" >
-                <thead class="thead-light">
-                    <th scope="col"> Name </th>
-                    <th scope="col"> Preview </th>
-                    <th scope="col"> Popularity </th>
-                    <th scope="col"> Track number </th>
-                    <th scope="col">  </th>
+            <table class="table table-hover table-borderless" >
+                <thead>
+                    <th scope="col" class="table-header"> Name </th>
+                    <th scope="col" class="table-header"> Preview </th>
+                    <th scope="col" class="table-header"> Popularity </th>
+                    <th scope="col" class="table-header"> Track number </th>
+                    <th scope="col" class="table-header">  </th>
                 </thead>
 
                 <?php
@@ -74,15 +80,19 @@
                   }
                 ?>
             </table>
-        <!-- </form> -->
-    </div>
+    <!-- </form> -->
 
-    <div>
-      Find song:
-      <form action="backEnd/find_song.php" method="post">
-        <input type="text" name="song_name">
-        <input type="submit" value="Search">
-      </form>
+            <div>
+              Find song:
+              <form action="backEnd/find_song.php" method="post">
+                <input type="text" name="song_name">
+                <input type="submit" value="Search">
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Optional JavaScript -->

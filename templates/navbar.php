@@ -1,5 +1,5 @@
 <div class= "container-fluid" id="navbar">
-    <nav class="navbar fixed-top navbar-dark bg-dark">
+    <nav class="navbar fixed-top">
         <div class="container">
             <a class="navbar-brand" href="./dashboard.php">MusicData</a>
 

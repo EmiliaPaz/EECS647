@@ -5,7 +5,7 @@ id,name,album_id,popularity,url,track_number,valence
 6LXMUR2rpxFBDo6nilS3yX,Cool Out,3JfSxDfmwS5OeHPwLSkrfr,70,,4,0.437
 2RSHsoi04658QL5xgQVov3,Bad Liar,3JfSxDfmwS5OeHPwLSkrfr,89,,5,0.0827
 2nkoWsTZa8LKPNGdjI5uxj,West Coast,3JfSxDfmwS5OeHPwLSkrfr,72,,6,0.677
-2bzitsPcImYC6DZWvvLCQi,"Zero - From the Original Motion Picture ""Ralph Breaks The Internet""",3JfSxDfmwS5OeHPwLSkrfr,76,,7,0.244
+2bzitsPcImYC6DZWvvLCQi,Zero - From the Original Motion Picture ‘Ralph Breaks The Internet’,3JfSxDfmwS5OeHPwLSkrfr,76,,7,0.244
 3R4Xk37WTagjzODMNEQLvs,Bullet In A Gun,3JfSxDfmwS5OeHPwLSkrfr,69,,8,0.476
 4qhDA6s0MkD5XpDqGLHIEY,Digital,3JfSxDfmwS5OeHPwLSkrfr,64,,9,0.383
 1uRBbjQ3uNFXCncWyNomHf,Only,3JfSxDfmwS5OeHPwLSkrfr,68,,10,0.424
@@ -15,12 +15,12 @@ id,name,album_id,popularity,url,track_number,valence
 5Q7zuH8VNu7aLappSusPu6,Burn Out,3JfSxDfmwS5OeHPwLSkrfr,67,,14,0.291
 7JAzAyjbJFPznEFdqpa1Si,Real Life,3JfSxDfmwS5OeHPwLSkrfr,67,,15,0.13
 31VOknKjFrEX47bZXzqcoF,Next To Me,33pt9HBdGlAbRGBHQgsZsU,75,,1,0.384
-28heol5hhOGj6KYbJrRteJ,I Don�۪t Know Why,33pt9HBdGlAbRGBHQgsZsU,69,,2,0.0725
+28heol5hhOGj6KYbJrRteJ,I Don’t Know Why,33pt9HBdGlAbRGBHQgsZsU,69,,2,0.0725
 6Qn5zhYkTa37e91HC1D7lb,Whatever It Takes,33pt9HBdGlAbRGBHQgsZsU,83,,3,0.556
 0pqnGHJpmpxLKifKRmU6WP,Believer,33pt9HBdGlAbRGBHQgsZsU,88,,4,0.666
 1y3bE5i57eUm3hfLAc7h08,Walking The Wire,33pt9HBdGlAbRGBHQgsZsU,73,,5,0.147
 3zT2616WcD9Df5m21OsCX0,Rise Up,33pt9HBdGlAbRGBHQgsZsU,71,,6,0.102
-0FfX0nofboxZjP0diT1eFv,I�۪ll Make It Up To You,33pt9HBdGlAbRGBHQgsZsU,67,,7,0.129
+0FfX0nofboxZjP0diT1eFv,I’ll Make It Up To You,33pt9HBdGlAbRGBHQgsZsU,67,,7,0.129
 2SJf7W18D1AEpr8L9ATu0c,Yesterday,33pt9HBdGlAbRGBHQgsZsU,66,,8,0.54
 1dekgAFF9uTCqLsklDaCWb,Mouth Of The River,33pt9HBdGlAbRGBHQgsZsU,67,,9,0.296
 1zB4vmk8tFRmM9UULNzbLB,Thunder,33pt9HBdGlAbRGBHQgsZsU,87,,10,0.288
@@ -29,7 +29,7 @@ id,name,album_id,popularity,url,track_number,valence
 64MmobYNviePoiaINMrbMn,Shots,0gmsXcmrcnxdZBrD5EyJEL,57,,1,0.338
 1WQFOwtI6EfsvRz7wcDbQm,Gold,0gmsXcmrcnxdZBrD5EyJEL,59,,2,0.286
 0joO6IeobvKP3cDz8xZfWe,Smoke And Mirrors,0gmsXcmrcnxdZBrD5EyJEL,47,,3,0.0812
-4o74y4XY1ypNZkZtZkK8Wi,I�۪m So Sorry,0gmsXcmrcnxdZBrD5EyJEL,63,,4,0.37
+4o74y4XY1ypNZkZtZkK8Wi,I’m So Sorry,0gmsXcmrcnxdZBrD5EyJEL,63,,4,0.37
 15DrrIod12Tc2IoMaHiwlQ,I Bet My Life,0gmsXcmrcnxdZBrD5EyJEL,64,,5,0.555
 7fvgzmfXxrdTcrL3xh2cBD,Polaroid,0gmsXcmrcnxdZBrD5EyJEL,52,,6,0.235
 2iIb73Qn02LsZwpW8RJUxh,Friction,0gmsXcmrcnxdZBrD5EyJEL,60,,7,0.273

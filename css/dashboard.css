@@ -1,0 +1,95 @@
+body{
+    background-color: white;
+    color: white;
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+#navbar{
+    height: 60px;
+    background-color: #5e757e;
+}
+
+.content{
+    margin-top: 40px;
+}
+
+h1{
+    color: #022735;
+    font-weight: bold;
+}
+
+/************************************ Box ************************************/
+.dashboard-box{
+    background-color: #022735;
+    border-radius: 10px;
+    margin: 10px;
+}
+
+.dashboard-button{
+    width: 100%;
+    background-color: #FFD500;
+    height: 300px;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+h3{
+    color: #efb22d;
+    padding-top: 10px;
+    font-weight: bold;
+}
+
+/************************************ Table ************************************/
+.table{
+    color: white;
+    border: none;
+}
+
+.table-header{
+    background-color: white;
+    color: #022735;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+  background-color: #efb22d;
+}
+
+.table a{
+    text-decoration: none;
+    color: white;
+}
+
+
+/************************************ Moods ************************************/
+.btn-moods{
+    height: 125px;
+}
+
+.btn-mood{
+    margin: 10px;
+    background-color: #efb22d;
+}
+
+.song-mood{
+    background-color: #022735;
+}
+
+.box-mood{
+    background-color: #022735;
+}
+
+/************************************ Settings ************************************/
+h4{
+    text-align: left;
+    font-weight: bold;
+}
+
+.btn-submitSettings{
+    background-color: #efb22d;
+}
+
+.btn-submitSettings:hover{
+    background-color: #f4ce79;
+}
