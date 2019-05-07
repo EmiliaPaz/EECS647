@@ -54,7 +54,7 @@
                     <table class="table table-hover table-borderless" >
                       <thead>
                           <th scope="col" class="table-header"> Title </th>
-                          <th scope="col" class="table-header"> Preview </th>
+                          <th scope="col" class="table-header"> Artist </th>
                           <th scope="col" class="table-header"> </th>
                       </thead>
 
@@ -78,10 +78,18 @@
                             $song_id= $row['song_id'];
                             $title = $row['name'];
                             $url = $row['url'];
+                            $find_artist = "SELECT stage_name FROM Artist_has_song WHERE song_id = '$song_id'";
+                            if ($artist_result = $mysqli->query($find_artist))
+                            {
+                              while ($artist_row = $artist_result->fetch_assoc())
+                              {
+                                $artist = $artist_row['stage_name'];
+                              }
+                            }
                             ?>
                             <tr>
-                                <td> <?php echo $title; ?> </td>
-                                <td> <a href="<?php echo $url; ?>" target="_blank"> Listen </a>  </td>
+                                <td> <a href="<?php echo $url; ?>" target="_blank"> <?php echo $title; ?> </a>  </td>
+                                <td> <?php echo $artist; ?></td>
                                 <td> <a href="backEnd/add_song.php?song_id=<?php echo $song_id ?>"> Add favorite </a> </td>
                             </tr>
                             <?php
@@ -98,7 +106,7 @@
                     <table class="table table-hover table-borderless" >
                         <thead>
                             <th scope="col" class="table-header"> Title </th>
-                            <th scope="col" class="table-header"> Preview </th>
+                            <th scope="col" class="table-header"> Artist </th>
                             <th scope="col" class="table-header"> </th>
                         </thead>
 
@@ -122,10 +130,18 @@
                               $song_id= $row['song_id'];
                               $title = $row['name'];
                               $url = $row['url'];
+                              $find_artist = "SELECT stage_name FROM Artist_has_song WHERE song_id = '$song_id'";
+                              if ($artist_result = $mysqli->query($find_artist))
+                              {
+                                while ($artist_row = $artist_result->fetch_assoc())
+                                {
+                                  $artist = $artist_row['stage_name'];
+                                }
+                              }
                               ?>
                               <tr>
-                                  <td> <?php echo $title; ?> </td>
-                                  <td> <a href="<?php echo $url; ?>" target="_blank"> Listen </a>  </td>
+                                  <td> <a href="<?php echo $url; ?>" target="_blank"> <?php echo $title; ?> </a>  </td>
+                                  <td> <?php echo $artist; ?> </td>
                                   <td> <a href="backEnd/add_song.php?song_id=<?php echo $song_id ?>"> Add favorite </a> </td>
                               </tr>
                               <?php
@@ -195,7 +211,7 @@
                                     <table class="table table-hover table-borderless song-mood" >
                                         <thead>
                                             <th scope="col" class="table-header"> Title </th>
-                                            <th scope="col" class="table-header"> Preview </th>
+                                            <th scope="col" class="table-header"> Artist </th>
                                             <th scope="col" class="table-header"> </th>
                                         </thead>
                                         <?php
@@ -211,10 +227,18 @@
                                               $song_id = $row['song_id'];
                                               $title = $row['name'];
                                               $url = $row['url'];
+                                              $find_artist = "SELECT stage_name FROM Artist_has_song WHERE song_id = '$song_id'";
+                                              if ($artist_result = $mysqli->query($find_artist))
+                                              {
+                                                while ($artist_row = $artist_result->fetch_assoc())
+                                                {
+                                                  $artist = $artist_row['stage_name'];
+                                                }
+                                              }
                                               ?>
                                               <tr>
-                                                  <td> <?php echo $title; ?> </td>
-                                                  <td> <a href="<?php echo $url; ?>" target="_blank"> Listen </a>  </td>
+                                                  <td> <a href="<?php echo $url; ?>" target="_blank"> <?php echo $title; ?> </a>  </td>
+                                                  <td> <?php echo $artist; ?> </td>
                                                   <td> <a href="backEnd/add_song.php?song_id=<?php echo $song_id ?>"> Add favorite </a> </td>
                                               </tr>
                                               <?php
@@ -233,7 +257,7 @@
                                     <table class="table table-hover table-borderless song-mood" >
                                         <thead>
                                             <th scope="col" class="table-header"> Title </th>
-                                            <th scope="col" class="table-header"> Preview </th>
+                                            <th scope="col" class="table-header"> Artist </th>
                                             <th scope="col" class="table-header"> </th>
                                         </thead>
                                         <?php
@@ -249,10 +273,18 @@
                                               $song_id = $row['song_id'];
                                               $title = $row['name'];
                                               $url = $row['url'];
+                                              $find_artist = "SELECT stage_name FROM Artist_has_song WHERE song_id = '$song_id'";
+                                              if ($artist_result = $mysqli->query($find_artist))
+                                              {
+                                                while ($artist_row = $artist_result->fetch_assoc())
+                                                {
+                                                  $artist = $artist_row['stage_name'];
+                                                }
+                                              }
                                               ?>
                                               <tr>
-                                                  <td> <?php echo $title; ?> </td>
-                                                  <td> <a href="<?php echo $url; ?>" target="_blank"> Listen </a>  </td>
+                                                  <td> <a href="<?php echo $url; ?>" target="_blank"> <?php echo $title; ?> </a>  </td>
+                                                  <td> <?php echo $artist; ?> </td>
                                                   <td> <a href="backEnd/add_song.php?song_id=<?php echo $song_id ?>"> Add favorite </a> </td>
                                               </tr>
                                               <?php
@@ -271,7 +303,7 @@
                                     <table class="table table-hover table-borderless song-mood" >
                                         <thead>
                                             <th scope="col" class="table-header"> Title </th>
-                                            <th scope="col" class="table-header"> Preview </th>
+                                            <th scope="col" class="table-header"> Artist </th>
                                             <th scope="col" class="table-header"> </th>
                                         </thead>
                                         <?php
@@ -287,10 +319,18 @@
                                               $song_id = $row['song_id'];
                                               $title = $row['name'];
                                               $url = $row['url'];
+                                              $find_artist = "SELECT stage_name FROM Artist_has_song WHERE song_id = '$song_id'";
+                                              if ($artist_result = $mysqli->query($find_artist))
+                                              {
+                                                while ($artist_row = $artist_result->fetch_assoc())
+                                                {
+                                                  $artist = $artist_row['stage_name'];
+                                                }
+                                              }
                                               ?>
                                               <tr>
-                                                  <td> <?php echo $title; ?> </td>
-                                                  <td> <a href="<?php echo $url; ?>" target="_blank"> Listen </a>  </td>
+                                                  <td> <a href="<?php echo $url; ?>" target="_blank"> <?php echo $title; ?> </a>  </td>
+                                                  <td> <?php echo $artist; ?> </td>
                                                   <td> <a href="backEnd/add_song.php?song_id=<?php echo $song_id ?>"> Add favorite </a> </td>
                                               </tr>
                                               <?php

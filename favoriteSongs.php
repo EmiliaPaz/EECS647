@@ -49,14 +49,14 @@
             <table class="table table-hover table-borderless" >
                 <thead>
                     <th scope="col" class="table-header"> Name </th>
-                    <th scope="col" class="table-header"> Preview </th>
+                    <th scope="col" class="table-header"> Artist </th>
                     <th scope="col" class="table-header"> Popularity </th>
                     <th scope="col" class="table-header"> Track number </th>
                     <th scope="col" class="table-header">  </th>
                 </thead>
 
                 <?php
-                  $query = "SELECT Song.song_id, Song.name, Song.url, Song.popularity, Song.track_number FROM Song INNER JOIN Favorite_songs ON Song.song_id = Favorite_songs.song_id AND username = '$username'";
+                  $query = "SELECT Song.song_id, Song.name, Song.url, Song.popularity, Song.track_number, Artist_has_song.stage_name FROM Song INNER JOIN Favorite_songs ON Song.song_id = Favorite_songs.song_id AND username = '$username' INNER JOIN Artist_has_song ON Artist_has_song.song_id = Favorite_songs.song_id";
                   if ($result = $mysqli->query($query))
                   {
                     while ($row = $result->fetch_assoc())
@@ -66,10 +66,11 @@
                       $url = $row['url'];
                       $popularity = $row['popularity'];
                       $track_number = $row['track_number'];
+                      $artist = $row['stage_name'];
                       ?>
                       <tr>
-                          <td> <?php echo $name; ?> </td>
-                          <td> <a href="<?php echo $url; ?>"> Listen </a>  </td>
+                          <td> <a href="<?php echo $url; ?>"> <?php echo $name; ?> </a>  </td>
+                          <td> <?php echo $artist; ?> </td>
                           <td> <?php echo $popularity; ?> </td>
                           <td> <?php echo $track_number; ?> </td>
                           <td> <a href="backEnd/delete_song.php?song_id=<?php echo $song_id ?>"> Remove from favorites </a> </td>

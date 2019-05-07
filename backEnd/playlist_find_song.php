@@ -34,26 +34,24 @@
 
             <table class="table thead-light table-hover" >
                 <thead class="thead-light">
-                    <th scope="col"> ID </th>
                     <th scope="col"> Name </th>
-                    <th scope="col"> Genre </th>
+                    <th scope="col"> Artist </th>
                     <th scope="col"> </th>
                 </thead>
 
                 <?php
-                  $query = "SELECT * FROM Song WHERE name LIKE '%$song_name%'";
+                  $query = "SELECT Song.song_id, Song.name, Artist_has_song.stage_name FROM Song, Artist_has_song WHERE name LIKE '%$song_name%' AND Song.song_id = Artist_has_song.song_id";
                   if ($result = $mysqli->query($query))
                   {
                     while ($row = $result->fetch_assoc())
                     {
                       $song_id = $row['song_id'];
                       $name = $row['name'];
-                      $genre = $row['genre'];
+                      $artist = $row['stage_name'];
                       ?>
                       <tr>
-                          <td> <?php echo $song_id; ?> </td>
                           <td> <?php echo $name; ?> </td>
-                          <td> <?php echo $genre; ?> </td>
+                          <td> <?php echo $artist; ?> </td>
                           <td>
                             <a href="playlist_add_song.php?song_id=<?php echo $song_id ?>"> Add to playlist </a>
                           </td>
