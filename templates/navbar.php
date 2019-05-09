@@ -1,5 +1,5 @@
 <div class= "container-fluid" id="navbar">
-    <nav class="navbar fixed-top">
+    <nav class="navbar fixed-top navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="./dashboard.php">MusicData</a>
 
@@ -8,18 +8,18 @@
                 <ul class="dropdown-menu dropdown-menu-right mt-2">
                     <li class="px-3 py-2">
                         <form action="dashboard.php" method="post">
-                            <input type="submit" value="Dashboard"  class="btn btn-light">
+                            <input type="submit" value="Dashboard"  class="btn btn-light btn-menu">
                         </form>
                     </li>
                     <li class="px-3 py-2">
                         <form action="settings.php" method="post">
-                            <input type="submit" value="Settings"  class="btn btn-light">
+                            <input type="submit" value="Settings"  class="btn btn-light btn-menu">
                         </form>
                     </li>
 
                     <li class="px-3 py-2">
                         <form action="backEnd/logout.php" method="post">
-                            <input type="submit" value="Log Out"  class="btn btn-light">
+                            <input type="submit" value="Log Out"  class="btn btn-light btn-menu">
                         </form>
                     </li>
                 </ul>

@@ -4,20 +4,36 @@ body{
     font-family: 'Lato', sans-serif;
 }
 
-
-
-#navbar{
-    height: 60px;
-    background-color: #5e757e;
-}
-
 .content{
-    margin-top: 40px;
+    margin-top: 50px;
 }
 
 h1{
     color: #022735;
     font-weight: bold;
+}
+
+#navbar{
+    height: 30px;
+}
+
+#navbar li{
+    list-style-type: none;
+}
+
+.dropdown-menu{
+    width: 200px;
+    background-color: #304e59;
+}
+
+.dropdown-menu li{
+    text-align: center;
+}
+
+.btn-menu{
+    background-color: #f1c053;
+    border-style: none;
+    color: #022735;
 }
 
 /************************************ Box ************************************/
