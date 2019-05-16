@@ -1,4 +1,4 @@
-# Project Title
+# Emilia Paz
 
 MusicData
 
@@ -7,7 +7,7 @@ MusicData
 Platform for users to organize and discover music.
 EECS 657 Final Project
 
-### Technologies
+## Technologies
 
 Front End:
 * HTML
