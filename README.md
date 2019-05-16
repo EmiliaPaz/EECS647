@@ -1,6 +1,4 @@
-# Emilia Paz
-
-MusicData
+# MusicData
 
 ## Description
 
